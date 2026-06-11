@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorials â€” Stackly Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dash-page">
+    <div class="db-sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="db-sidebar" id="dbSidebar">
+      <div class="db-sidebar-logo">
+        <a href="../index.html"
+          ><img src="../assets/images/logoStackly.webp" alt="Stackly"
+        /></a>
+      </div>
+      <div class="db-sidebar-user">
+        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div style="min-width: 0">
+          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
+          <div class="db-user-role" id="sidebarRole">â€”</div>
+        </div>
+      </div>
+      <nav class="db-nav" id="dbNav"></nav>
+      <div class="db-sidebar-bottom">
+        <button class="db-logout-btn" id="logoutBtn">
+          <span style="font-size: 16px">ðŸšª</span> Sign Out
+        </button>
+      </div>
+    </aside>
+    <div class="db-main">
+      <header class="db-topbar">
+        <div class="db-topbar-left">
+          <button class="db-hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div class="db-page-title">Tutorials</div>
+            <div class="db-breadcrumb">Stackly / <span>Viewer</span></div>
+          </div>
+        </div>
+        <div class="db-topbar-right">
+          <div class="db-search">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            Search tutorialsâ€¦
+          </div>
+          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+        </div>
+      </header>
+      <main class="db-content">
+        <div class="pg-header">
+          <div class="pg-title">Tutorials ðŸŽ“</div>
+          <div class="pg-sub">
+            Interactive guides to help you get the most out of Stackly â€” 9/15
+            completed.
+          </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="pg-banner">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              gap: 16px;
+            "
+          >
+            <div>
+              <div
+                style="
+                  font-size: 0.95rem;
+                  font-weight: 700;
+                  color: var(--clr-white);
+                  margin-bottom: 4px;
+                "
+              >
+                Your Learning Progress ðŸŽ“
+              </div>
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 12px;
+                "
+              >
+                9 of 15 tutorials completed Â· Keep it up!
+              </div>
+              <div class="db-progress" style="width: 280px; max-width: 100%">
+                <div class="db-progress-fill accent" style="width: 60%"></div>
+              </div>
+            </div>
+            <div style="text-align: right">
+              <div
+                style="
+                  font-size: 2rem;
+                  font-weight: 900;
+                  color: var(--clr-white);
+                "
+              >
+                60%
+              </div>
+              <div style="font-size: 0.78rem; color: var(--clr-muted)">
+                completion rate
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pg-tabs">
+          <button class="pg-tab active">All</button
+          ><button class="pg-tab">In Progress</button
+          ><button class="pg-tab">Completed</button
+          ><button class="pg-tab">New</button>
+        </div>
+
+        <div class="pg-grid-3">
+          <div class="pg-tutorial-card">
+            <div
+              class="pg-tutorial-thumb"
+              style="background: rgba(108, 99, 255, 0.12)"
+            >
+              ðŸ 
+            </div>
+            <div class="pg-tutorial-title">Dashboard Basics</div>
+            <div class="pg-tutorial-desc">
+              Learn how to navigate your dashboard, understand each widget and
+              customise your layout.
+            </div>
+            <div class="db-progress" style="margin-bottom: 8px">
+              <div class="db-progress-fill" style="width: 100%"></div>
+            </div>
+            <div class="pg-tutorial-footer">
+              <span class="pg-chip green">Completed âœ”</span
+              ><span style="font-size: 0.78rem; color: var(--clr-muted)"
+                >5 min</span
+              >
+            </div>
+          </div>
+
+          <div class="pg-tutorial-card">
+            <div
+              class="pg-tutorial-thumb"
+              style="background: rgba(0, 212, 255, 0.1)"
+            >
+              ðŸ“Š
+            </div>
+            <div class="pg-tutorial-title">Reading Analytics Reports</div>
+            <div class="pg-tutorial-desc">
+              Understand conversion funnels, traffic sources and how to apply
+              insights to decision-making.
+            </div>
+            <div class="db-progress" style="margin-bottom: 8px">
+              <div class="db-progress-fill accent" style="width: 60%"></div>
+            </div>
+            <div class="pg-tutorial-footer">
+              <span class="pg-chip blue">In Progress</span
+              ><span style="font-size: 0.78rem; color: var(--clr-muted)"
+                >8 min</span
+              >
+            </div>
+          </div>
+
+          <div class="pg-tutorial-card">
+            <div
+              class="pg-tutorial-thumb"
+              style="background: rgba(0, 255, 163, 0.08)"
+            >
+              ðŸ””
+            </div>
+            <div class="pg-tutorial-title">Setting Up Alerts</div>
+            <div class="pg-tutorial-desc">
+              Configure smart notifications to stay informed when key metrics
+              change significantly.
+            </div>
+            <div class="db-progress" style="margin-bottom: 8px">
+              <div class="db-progress-fill warn" style="width: 25%"></div>
+            </div>
+            <div class="pg-tutorial-footer">
+              <span class="pg-chip orange">Started</span
+              ><span style="font-size: 0.78rem; color: var(--clr-muted)"
+                >4 min</span
+              >
+            </div>
+          </div>
+
+          <div class="pg-tutorial-card">
+            <div
+              class="pg-tutorial-thumb"
+              style="background: rgba(255, 170, 107, 0.08)"
+            >
+              ðŸ¤–
+            </div>
+            <div class="pg-tutorial-title">Understanding AI Agents</div>
+            <div class="pg-tutorial-desc">
+              What AI Agents are, what they do for your workspace and how to
+              interpret their output.
+            </div>
+            <div class="db-progress" style="margin-bottom: 8px">
+              <div class="db-progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="pg-tutorial-footer">
+              <span class="pg-chip green">New</span
+              ><span style="font-size: 0.78rem; color: var(--clr-muted)"
+                >6 min</span
+              >
+            </div>
+          </div>
+
+          <div class="pg-tutorial-card">
+            <div
+              class="pg-tutorial-thumb"
+              style="background: rgba(108, 99, 255, 0.12)"
+            >
+              ðŸ¤
+            </div>
+            <div class="pg-tutorial-title">Sharing & Collaboration</div>
+            <div class="pg-tutorial-desc">
+              How to share reports, invite teammates and leave comments on
+              shared dashboards.
+            </div>
+            <div class="db-progress" style="margin-bottom: 8px">
+              <div class="db-progress-fill" style="width: 100%"></div>
+            </div>
+            <div class="pg-tutorial-footer">
+              <span class="pg-chip green">Completed âœ”</span
+              ><span style="font-size: 0.78rem; color: var(--clr-muted)"
+                >5 min</span
+              >
+            </div>
+          </div>
+
+          <div class="pg-tutorial-card">
+            <div
+              class="pg-tutorial-thumb"
+              style="background: rgba(255, 107, 107, 0.08)"
+            >
+              ðŸ›¡ï¸
+            </div>
+            <div class="pg-tutorial-title">Account Security</div>
+            <div class="pg-tutorial-desc">
+              Enable MFA, manage your session settings and keep your account
+              secure.
+            </div>
+            <div class="db-progress" style="margin-bottom: 8px">
+              <div class="db-progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="pg-tutorial-footer">
+              <span class="pg-chip">Not Started</span
+              ><span style="font-size: 0.78rem; color: var(--clr-muted)"
+                >3 min</span
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+      bootShell(
+        "viewer-tutorials.html",
+        "Complete your onboarding â€” interactive guides to master Stackly.",
+      );
+    </script>
+  <script src=../assets/js/404-redirect.js></script>`n </body>
+</html>
+

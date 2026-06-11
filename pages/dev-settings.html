@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings â€” Stackly Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dash-page">
+    <div class="db-sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="db-sidebar" id="dbSidebar">
+      <div class="db-sidebar-logo">
+        <a href="../index.html"
+          ><img src="../assets/images/logoStackly.webp" alt="Stackly"
+        /></a>
+      </div>
+      <div class="db-sidebar-user">
+        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div style="min-width: 0">
+          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
+          <div class="db-user-role" id="sidebarRole">â€”</div>
+        </div>
+      </div>
+      <nav class="db-nav" id="dbNav"></nav>
+      <div class="db-sidebar-bottom">
+        <button class="db-logout-btn" id="logoutBtn">
+          <span style="font-size: 16px">ðŸšª</span> Sign Out
+        </button>
+      </div>
+    </aside>
+    <div class="db-main">
+      <header class="db-topbar">
+        <div class="db-topbar-left">
+          <button class="db-hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div class="db-page-title">Developer Settings</div>
+            <div class="db-breadcrumb">Stackly / <span>Dev Settings</span></div>
+          </div>
+        </div>
+        <div class="db-topbar-right">
+          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+        </div>
+      </header>
+      <main class="db-content">
+        <div class="pg-header">
+          <div class="pg-title">Developer Settings ðŸ”§</div>
+          <div class="pg-sub">
+            Configure API keys, webhooks, environment variables and notification
+            preferences.
+          </div>
+          <div class="pg-actions">
+            <button class="btn-db-primary">ðŸ’¾ Save</button
+            ><button class="btn-db-ghost">â†© Reset</button>
+          </div>
+        </div>
+
+        <div class="pg-grid-main-side">
+          <div style="display: flex; flex-direction: column; gap: 20px">
+            <div class="db-widget">
+              <div class="db-widget-header">
+                <div class="db-widget-title"><span>ðŸ”‘</span> API Keys</div>
+                <button
+                  class="btn-db-primary"
+                  style="padding: 6px 14px; font-size: 0.78rem"
+                >
+                  ï¼‹ Generate Key
+                </button>
+              </div>
+              <div class="db-widget-body" style="padding-top: 12px">
+                <div style="display: flex; flex-direction: column; gap: 12px">
+                  <div
+                    style="
+                      padding: 14px;
+                      background: rgba(255, 255, 255, 0.02);
+                      border: 1px solid var(--clr-border);
+                      border-radius: var(--radius-sm);
+                    "
+                  >
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 6px;
+                      "
+                    >
+                      <span
+                        style="
+                          font-size: 0.8rem;
+                          font-weight: 600;
+                          color: var(--clr-white);
+                        "
+                        >Production Key</span
+                      ><span class="db-status-pill pill-active">Active</span>
+                    </div>
+                    <div
+                      style="
+                        font-family: monospace;
+                        font-size: 0.78rem;
+                        color: var(--clr-text);
+                        margin-bottom: 6px;
+                      "
+                    >
+                      sk_live_â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢xxf4
+                    </div>
+                    <div style="display: flex; gap: 8px">
+                      <button
+                        class="btn-db-ghost"
+                        style="padding: 4px 12px; font-size: 0.75rem"
+                      >
+                        Copy</button
+                      ><button
+                        class="btn-db-ghost"
+                        style="
+                          padding: 4px 12px;
+                          font-size: 0.75rem;
+                          color: #ff6b6b;
+                          border-color: rgba(255, 107, 107, 0.3);
+                        "
+                      >
+                        Revoke
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      padding: 14px;
+                      background: rgba(255, 255, 255, 0.02);
+                      border: 1px solid var(--clr-border);
+                      border-radius: var(--radius-sm);
+                    "
+                  >
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 6px;
+                      "
+                    >
+                      <span
+                        style="
+                          font-size: 0.8rem;
+                          font-weight: 600;
+                          color: var(--clr-white);
+                        "
+                        >Test Key</span
+                      ><span class="db-status-pill pill-active">Active</span>
+                    </div>
+                    <div
+                      style="
+                        font-family: monospace;
+                        font-size: 0.78rem;
+                        color: var(--clr-text);
+                        margin-bottom: 6px;
+                      "
+                    >
+                      sk_test_â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢aa21
+                    </div>
+                    <div style="display: flex; gap: 8px">
+                      <button
+                        class="btn-db-ghost"
+                        style="padding: 4px 12px; font-size: 0.75rem"
+                      >
+                        Copy</button
+                      ><button
+                        class="btn-db-ghost"
+                        style="
+                          padding: 4px 12px;
+                          font-size: 0.75rem;
+                          color: #ff6b6b;
+                          border-color: rgba(255, 107, 107, 0.3);
+                        "
+                      >
+                        Revoke
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="db-widget">
+              <div class="db-widget-header">
+                <div class="db-widget-title">
+                  <span>âš™ï¸</span> Environment Variables
+                </div>
+              </div>
+              <div class="db-widget-body">
+                <div class="pg-terminal">
+                  <span class="cmt"># Environment variables</span>
+                  <span class="kw">NODE_ENV</span>=<span class="str"
+                    >production</span
+                  >
+                  <span class="kw">API_VERSION</span>=<span class="num"
+                    >v2</span
+                  >
+                  <span class="kw">AI_MODEL</span>=<span class="str"
+                    >nexus-v3</span
+                  >
+                  <span class="kw">RATE_LIMIT</span>=<span class="num"
+                    >10000</span
+                  >
+                  <span class="kw">LOG_LEVEL</span>=<span class="str"
+                    >info</span
+                  >
+                  <span class="kw">CACHE_TTL</span>=<span class="num"
+                    >3600</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 20px">
+            <div class="db-widget">
+              <div class="db-widget-header">
+                <div class="db-widget-title">
+                  <span>ðŸ””</span> Alert Preferences
+                </div>
+              </div>
+              <div class="db-widget-body" style="padding-top: 12px">
+                <div style="display: flex; flex-direction: column; gap: 14px">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          font-size: 0.85rem;
+                          font-weight: 600;
+                          color: var(--clr-white);
+                        "
+                      >
+                        Error Rate Spike
+                      </div>
+                      <div style="font-size: 0.73rem; color: var(--clr-muted)">
+                        >0.1% triggers alert
+                      </div>
+                    </div>
+                    <button class="pg-toggle on"></button>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          font-size: 0.85rem;
+                          font-weight: 600;
+                          color: var(--clr-white);
+                        "
+                      >
+                        Deploy Failures
+                      </div>
+                      <div style="font-size: 0.73rem; color: var(--clr-muted)">
+                        Notify on failed CI/CD
+                      </div>
+                    </div>
+                    <button class="pg-toggle on"></button>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          font-size: 0.85rem;
+                          font-weight: 600;
+                          color: var(--clr-white);
+                        "
+                      >
+                        Latency Alerts
+                      </div>
+                      <div style="font-size: 0.73rem; color: var(--clr-muted)">
+                        P95 > 200ms threshold
+                      </div>
+                    </div>
+                    <button class="pg-toggle on"></button>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          font-size: 0.85rem;
+                          font-weight: 600;
+                          color: var(--clr-white);
+                        "
+                      >
+                        Quota Warnings
+                      </div>
+                      <div style="font-size: 0.73rem; color: var(--clr-muted)">
+                        Alert at 80% API quota
+                      </div>
+                    </div>
+                    <button class="pg-toggle on"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+      bootShell(
+        "dev-settings.html",
+        "Configure your developer environment â€” keys, alerts and preferences.",
+      );
+      document.querySelectorAll(".pg-toggle").forEach((t) => {
+        t.addEventListener("click", () => t.classList.toggle("on"));
+      });
+    </script>
+  <script src=../assets/js/404-redirect.js></script>`n </body>
+</html>
+

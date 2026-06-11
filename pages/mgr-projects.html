@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects â€” Stackly Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dash-page">
+    <div class="db-sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="db-sidebar" id="dbSidebar">
+      <div class="db-sidebar-logo">
+        <a href="../index.html"
+          ><img src="../assets/images/logoStackly.webp" alt="Stackly"
+        /></a>
+      </div>
+      <div class="db-sidebar-user">
+        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div style="min-width: 0">
+          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
+          <div class="db-user-role" id="sidebarRole">â€”</div>
+        </div>
+      </div>
+      <nav class="db-nav" id="dbNav"></nav>
+      <div class="db-sidebar-bottom">
+        <button class="db-logout-btn" id="logoutBtn">
+          <span style="font-size: 16px">ðŸšª</span> Sign Out
+        </button>
+      </div>
+    </aside>
+    <div class="db-main">
+      <header class="db-topbar">
+        <div class="db-topbar-left">
+          <button class="db-hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div class="db-page-title">Projects</div>
+            <div class="db-breadcrumb">Stackly / <span>Team</span></div>
+          </div>
+        </div>
+        <div class="db-topbar-right">
+          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+        </div>
+      </header>
+      <main class="db-content">
+        <div class="pg-header">
+          <div class="pg-title">Projects ðŸ“‹</div>
+          <div class="pg-sub">
+            Manage all active projects â€” track progress, owners and upcoming
+            deadlines.
+          </div>
+          <div class="pg-actions">
+            <button class="btn-db-primary">ï¼‹ New Project</button
+            ><button class="btn-db-ghost">ðŸ—‚ï¸ Archive</button>
+          </div>
+        </div>
+
+        <div class="pg-grid-4">
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸ“‹</span>
+            <div class="pg-metric-val">5</div>
+            <div class="pg-metric-label">Active Projects</div>
+            <div class="pg-metric-trend trend-up">All in progress</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">âœ…</span>
+            <div class="pg-metric-val">2</div>
+            <div class="pg-metric-label">Due This Month</div>
+            <div class="pg-metric-trend trend-down">Tight deadlines</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">âš ï¸</span>
+            <div class="pg-metric-val">1</div>
+            <div class="pg-metric-label">At Risk</div>
+            <div class="pg-metric-trend trend-down">Scope creep</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸ“¦</span>
+            <div class="pg-metric-val">3</div>
+            <div class="pg-metric-label">Completed (Q3)</div>
+            <div class="pg-metric-trend trend-up">On time</div>
+          </div>
+        </div>
+
+        <div class="pg-grid-3">
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸš€</span> Project Orion</div>
+              <span class="db-agent-status status-running">active</span>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 14px;
+                "
+              >
+                Platform v3 feature development â€” AI-powered analytics module
+                and redesigned UI.
+              </div>
+              <div class="db-progress" style="margin-bottom: 6px">
+                <div class="db-progress-fill" style="width: 88%"></div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 12px;
+                "
+              >
+                <span style="font-size: 0.72rem; color: var(--clr-muted)"
+                  >88% complete</span
+                ><span style="font-size: 0.72rem; color: var(--clr-accent)"
+                  >Due Nov 15</span
+                >
+              </div>
+              <div style="display: flex; gap: 6px">
+                <div
+                  class="db-user-avatar"
+                  style="width: 28px; height: 28px; font-size: 0.7rem"
+                >
+                  SK
+                </div>
+                <div
+                  class="db-user-avatar"
+                  style="width: 28px; height: 28px; font-size: 0.7rem"
+                >
+                  MR
+                </div>
+                <div
+                  class="db-user-avatar"
+                  style="width: 28px; height: 28px; font-size: 0.7rem"
+                >
+                  EM
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸŽ¨</span> Brand Refresh</div>
+              <span class="db-agent-status status-running">active</span>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 14px;
+                "
+              >
+                Full visual identity update â€” new logo, design system and
+                updated marketing site.
+              </div>
+              <div class="db-progress" style="margin-bottom: 6px">
+                <div class="db-progress-fill accent" style="width: 97%"></div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 12px;
+                "
+              >
+                <span style="font-size: 0.72rem; color: var(--clr-muted)"
+                  >97% complete</span
+                ><span style="font-size: 0.72rem; color: var(--clr-green)"
+                  >Due Nov 10</span
+                >
+              </div>
+              <div style="display: flex; gap: 6px">
+                <div
+                  class="db-user-avatar"
+                  style="width: 28px; height: 28px; font-size: 0.7rem"
+                >
+                  TH
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ—„ï¸</span> Data Migration</div>
+              <span class="db-agent-status status-queued">at risk</span>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 14px;
+                "
+              >
+                Migrate legacy database to new distributed architecture. Scope
+                expanded mid-sprint.
+              </div>
+              <div class="db-progress" style="margin-bottom: 6px">
+                <div class="db-progress-fill warn" style="width: 41%"></div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 12px;
+                "
+              >
+                <span style="font-size: 0.72rem; color: var(--clr-muted)"
+                  >41% complete</span
+                ><span style="font-size: 0.72rem; color: #ff6b6b"
+                  >Due Dec 5</span
+                >
+              </div>
+              <div style="display: flex; gap: 6px">
+                <div
+                  class="db-user-avatar"
+                  style="width: 28px; height: 28px; font-size: 0.7rem"
+                >
+                  PN
+                </div>
+                <div
+                  class="db-user-avatar"
+                  style="width: 28px; height: 28px; font-size: 0.7rem"
+                >
+                  JL
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+      bootShell(
+        "mgr-projects.html",
+        "Track all projects â€” progress, owners and deadline risk at a glance.",
+      );
+    </script>
+  <script src=../assets/js/404-redirect.js></script>`n </body>
+</html>
+

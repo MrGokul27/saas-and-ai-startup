@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workflows â€” Stackly Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dash-page">
+    <div class="db-sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="db-sidebar" id="dbSidebar">
+      <div class="db-sidebar-logo">
+        <a href="../index.html"
+          ><img src="../assets/images/logoStackly.webp" alt="Stackly"
+        /></a>
+      </div>
+      <div class="db-sidebar-user">
+        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div style="min-width: 0">
+          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
+          <div class="db-user-role" id="sidebarRole">â€”</div>
+        </div>
+      </div>
+      <nav class="db-nav" id="dbNav"></nav>
+      <div class="db-sidebar-bottom">
+        <button class="db-logout-btn" id="logoutBtn">
+          <span style="font-size: 16px">ðŸšª</span> Sign Out
+        </button>
+      </div>
+    </aside>
+    <div class="db-main">
+      <header class="db-topbar">
+        <div class="db-topbar-left">
+          <button class="db-hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div class="db-page-title">Workflows</div>
+            <div class="db-breadcrumb">
+              Stackly / <span>AI & Automation</span>
+            </div>
+          </div>
+        </div>
+        <div class="db-topbar-right">
+          <div class="db-search">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            Search workflowsâ€¦
+          </div>
+          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+        </div>
+      </header>
+      <main class="db-content">
+        <div class="pg-header">
+          <div class="pg-title">Workflows âš™ï¸</div>
+          <div class="pg-sub">
+            Build and manage automated AI-powered workflows that run across your
+            entire stack.
+          </div>
+          <div class="pg-actions">
+            <button class="btn-db-primary">ï¼‹ New Workflow</button
+            ><button class="btn-db-ghost">ðŸ“‹ Templates</button>
+          </div>
+        </div>
+
+        <div class="pg-grid-4">
+          <div class="pg-metric">
+            <span class="pg-metric-icon">âš™ï¸</span>
+            <div class="pg-metric-val">24</div>
+            <div class="pg-metric-label">Active Workflows</div>
+            <div class="pg-metric-trend trend-up">All healthy</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">âœ…</span>
+            <div class="pg-metric-val">1,240</div>
+            <div class="pg-metric-label">Runs Today</div>
+            <div class="pg-metric-trend trend-up">â†‘ 12% vs yesterday</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">âš¡</span>
+            <div class="pg-metric-val">320ms</div>
+            <div class="pg-metric-label">Avg Execution Time</div>
+            <div class="pg-metric-trend trend-up">â†‘ 18ms faster</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">âš ï¸</span>
+            <div class="pg-metric-val">3</div>
+            <div class="pg-metric-label">Failed Runs (24h)</div>
+            <div class="pg-metric-trend trend-down">Needs review</div>
+          </div>
+        </div>
+
+        <div class="pg-tabs">
+          <button class="pg-tab active">All Workflows</button
+          ><button class="pg-tab">Triggers</button
+          ><button class="pg-tab">Scheduled</button
+          ><button class="pg-tab">Failed</button>
+        </div>
+
+        <div class="db-widget">
+          <div class="db-widget-header">
+            <div class="db-widget-title"><span>âš™ï¸</span> Workflow List</div>
+            <button class="db-widget-action">Filter</button>
+          </div>
+          <div class="db-widget-body" style="padding: 0">
+            <div class="db-table-wrap">
+              <table class="db-table">
+                <thead>
+                  <tr>
+                    <th>Workflow Name</th>
+                    <th>Trigger</th>
+                    <th>Runs (24h)</th>
+                    <th>Success Rate</th>
+                    <th>Avg Time</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>User Onboarding Pipeline</td>
+                    <td>Event: user.signup</td>
+                    <td>428</td>
+                    <td>99.8%</td>
+                    <td>280ms</td>
+                    <td>
+                      <span class="db-status-pill pill-active">Active</span>
+                    </td>
+                    <td>
+                      <button
+                        class="btn-db-ghost"
+                        style="padding: 4px 12px; font-size: 0.75rem"
+                      >
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>AI Report Generation</td>
+                    <td>Schedule: 00:00 UTC</td>
+                    <td>1</td>
+                    <td>100%</td>
+                    <td>42s</td>
+                    <td>
+                      <span class="db-status-pill pill-active">Active</span>
+                    </td>
+                    <td>
+                      <button
+                        class="btn-db-ghost"
+                        style="padding: 4px 12px; font-size: 0.75rem"
+                      >
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Security Anomaly Alert</td>
+                    <td>Event: threat.detected</td>
+                    <td>7</td>
+                    <td>100%</td>
+                    <td>120ms</td>
+                    <td>
+                      <span class="db-status-pill pill-active">Active</span>
+                    </td>
+                    <td>
+                      <button
+                        class="btn-db-ghost"
+                        style="padding: 4px 12px; font-size: 0.75rem"
+                      >
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Stripe Sync Workflow</td>
+                    <td>Webhook: stripe/invoice</td>
+                    <td>380</td>
+                    <td>99.2%</td>
+                    <td>380ms</td>
+                    <td>
+                      <span class="db-status-pill pill-active">Active</span>
+                    </td>
+                    <td>
+                      <button
+                        class="btn-db-ghost"
+                        style="padding: 4px 12px; font-size: 0.75rem"
+                      >
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Churn Risk Scorer</td>
+                    <td>Schedule: every 6h</td>
+                    <td>4</td>
+                    <td>98.4%</td>
+                    <td>12s</td>
+                    <td>
+                      <span class="db-status-pill pill-active">Active</span>
+                    </td>
+                    <td>
+                      <button
+                        class="btn-db-ghost"
+                        style="padding: 4px 12px; font-size: 0.75rem"
+                      >
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Legacy Data Migrator</td>
+                    <td>Manual trigger</td>
+                    <td>0</td>
+                    <td>66.7%</td>
+                    <td>8m</td>
+                    <td>
+                      <span class="db-status-pill pill-danger">Error</span>
+                    </td>
+                    <td>
+                      <button
+                        class="btn-db-ghost"
+                        style="padding: 4px 12px; font-size: 0.75rem"
+                      >
+                        Debug
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+      bootShell(
+        "admin-workflows.html",
+        "Automate everything â€” build workflows that run your entire platform.",
+      );
+    </script>
+  <script src=../assets/js/404-redirect.js></script>`n </body>
+</html>
+

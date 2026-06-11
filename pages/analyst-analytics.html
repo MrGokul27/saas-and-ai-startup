@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics â€” Stackly Analyst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dash-page">
+    <div class="db-sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="db-sidebar" id="dbSidebar">
+      <div class="db-sidebar-logo">
+        <a href="../index.html"
+          ><img src="../assets/images/logoStackly.webp" alt="Stackly"
+        /></a>
+      </div>
+      <div class="db-sidebar-user">
+        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div style="min-width: 0">
+          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
+          <div class="db-user-role" id="sidebarRole">â€”</div>
+        </div>
+      </div>
+      <nav class="db-nav" id="dbNav"></nav>
+      <div class="db-sidebar-bottom">
+        <button class="db-logout-btn" id="logoutBtn">
+          <span style="font-size: 16px">ðŸšª</span> Sign Out
+        </button>
+      </div>
+    </aside>
+    <div class="db-main">
+      <header class="db-topbar">
+        <div class="db-topbar-left">
+          <button class="db-hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div class="db-page-title">Analytics</div>
+            <div class="db-breadcrumb">
+              Stackly / <span>Analyst Analytics</span>
+            </div>
+          </div>
+        </div>
+        <div class="db-topbar-right">
+          <div class="db-search">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            Searchâ€¦
+          </div>
+          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+        </div>
+      </header>
+      <main class="db-content">
+        <div class="pg-header">
+          <div class="pg-title">Analytics ðŸ“Š</div>
+          <div class="pg-sub">
+            Deep-dive into user behavior, traffic sources and product engagement
+            metrics.
+          </div>
+          <div class="pg-actions">
+            <button class="btn-db-primary">ðŸ“Š Custom Report</button
+            ><button class="btn-db-ghost">ðŸ“¤ Export</button>
+          </div>
+        </div>
+
+        <div class="pg-grid-4">
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸ‘ï¸</span>
+            <div class="pg-metric-val">892K</div>
+            <div class="pg-metric-label">Page Views (MTD)</div>
+            <div class="pg-metric-trend trend-up">â†‘ 14.3%</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸŽ¯</span>
+            <div class="pg-metric-val">6.8%</div>
+            <div class="pg-metric-label">Conversion Rate</div>
+            <div class="pg-metric-trend trend-up">â†‘ 0.9% vs last month</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">â±ï¸</span>
+            <div class="pg-metric-val">4m 22s</div>
+            <div class="pg-metric-label">Avg Session Duration</div>
+            <div class="pg-metric-trend trend-up">â†‘ 18s improvement</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸ“‰</span>
+            <div class="pg-metric-val">28%</div>
+            <div class="pg-metric-label">Bounce Rate</div>
+            <div class="pg-metric-trend trend-up">â†“ 4% best ever</div>
+          </div>
+        </div>
+
+        <div class="pg-grid-main-side">
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title">
+                <span>ðŸ“ˆ</span> Daily Page Views
+              </div>
+              <button class="db-widget-action">Export</button>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  display: flex;
+                  align-items: baseline;
+                  gap: 10px;
+                  margin-bottom: 16px;
+                "
+              >
+                <span
+                  style="
+                    font-size: 1.8rem;
+                    font-weight: 900;
+                    color: var(--clr-white);
+                  "
+                  >892K</span
+                >
+                <span
+                  class="trend-up"
+                  style="
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    padding: 2px 8px;
+                    border-radius: 100px;
+                  "
+                  >â†‘ 14.3%</span
+                >
+              </div>
+              <div class="pg-chart-area" id="pvChart"></div>
+            </div>
+          </div>
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ©</span> Traffic Sources</div>
+            </div>
+            <div class="db-widget-body">
+              <div class="db-donut-wrap">
+                <svg class="db-donut" viewBox="0 0 120 120" id="srcDonut"></svg>
+                <div class="db-donut-legend">
+                  <div class="db-legend-item">
+                    <span
+                      class="db-legend-dot"
+                      style="background: #6c63ff"
+                    ></span
+                    >Organic<span class="db-legend-val">38%</span>
+                  </div>
+                  <div class="db-legend-item">
+                    <span
+                      class="db-legend-dot"
+                      style="background: #00d4ff"
+                    ></span
+                    >Paid<span class="db-legend-val">26%</span>
+                  </div>
+                  <div class="db-legend-item">
+                    <span
+                      class="db-legend-dot"
+                      style="background: #00ffa3"
+                    ></span
+                    >Social<span class="db-legend-val">22%</span>
+                  </div>
+                  <div class="db-legend-item">
+                    <span
+                      class="db-legend-dot"
+                      style="background: #ff6b6b"
+                    ></span
+                    >Direct<span class="db-legend-val">14%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top Pages -->
+        <div class="db-widget">
+          <div class="db-widget-header">
+            <div class="db-widget-title"><span>ðŸ“„</span> Top Pages</div>
+            <button class="db-widget-action">View All</button>
+          </div>
+          <div class="db-widget-body" style="padding: 0">
+            <div class="db-table-wrap">
+              <table class="db-table">
+                <thead>
+                  <tr>
+                    <th>Page</th>
+                    <th>Views</th>
+                    <th>Unique Users</th>
+                    <th>Bounce Rate</th>
+                    <th>Avg Time</th>
+                    <th>CVR</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>/pricing</td>
+                    <td>42,100</td>
+                    <td>38,200</td>
+                    <td>22%</td>
+                    <td>3m 40s</td>
+                    <td>
+                      <span class="pg-chip green" style="font-size: 0.7rem"
+                        >8.2%</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>/features</td>
+                    <td>38,400</td>
+                    <td>34,800</td>
+                    <td>28%</td>
+                    <td>2m 55s</td>
+                    <td>
+                      <span class="pg-chip blue" style="font-size: 0.7rem"
+                        >5.6%</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>/home</td>
+                    <td>91,200</td>
+                    <td>84,600</td>
+                    <td>35%</td>
+                    <td>1m 20s</td>
+                    <td>
+                      <span class="pg-chip" style="font-size: 0.7rem"
+                        >3.1%</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>/docs</td>
+                    <td>24,600</td>
+                    <td>22,100</td>
+                    <td>18%</td>
+                    <td>5m 10s</td>
+                    <td>
+                      <span class="pg-chip" style="font-size: 0.7rem"
+                        >1.8%</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>/blog</td>
+                    <td>17,800</td>
+                    <td>16,200</td>
+                    <td>40%</td>
+                    <td>2m 00s</td>
+                    <td>
+                      <span class="pg-chip" style="font-size: 0.7rem"
+                        >2.4%</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+      bootShell(
+        "analyst-analytics.html",
+        "Explore user behavior, traffic and conversion data in depth.",
+      );
+      const vals = [45, 62, 55, 70, 66, 80, 74, 82, 68, 88, 76, 92];
+      const max = Math.max(...vals);
+      const rc = document.getElementById("pvChart");
+      vals.forEach((v, i) => {
+        const b = document.createElement("div");
+        b.className = "pg-chart-bar" + (i % 2 === 0 ? " accent" : "");
+        b.style.height = (v / max) * 100 + "%";
+        rc.appendChild(b);
+      });
+      const d = [
+        { val: 38, color: "#6c63ff" },
+        { val: 26, color: "#00d4ff" },
+        { val: 22, color: "#00ffa3" },
+        { val: 14, color: "#ff6b6b" },
+      ];
+      const tot = d.reduce((s, x) => s + x.val, 0),
+        R = 40,
+        cx = 60,
+        cy = 60,
+        st = 18,
+        ci = 2 * Math.PI * R;
+      let off = 0,
+        p = "";
+      d.forEach((x) => {
+        const da = (x.val / tot) * ci,
+          ga = ci - da;
+        p += `<circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="${x.color}" stroke-width="${st}" stroke-dasharray="${da} ${ga}" stroke-dashoffset="${-off}" transform="rotate(-90 ${cx} ${cy})"/>`;
+        off += da;
+      });
+      p += `<text x="${cx}" y="${cy + 4}" text-anchor="middle" fill="#fff" font-size="11" font-weight="800">100%</text>`;
+      document.getElementById("srcDonut").innerHTML = p;
+    </script>
+  <script src=../assets/js/404-redirect.js></script>`n </body>
+</html>
+

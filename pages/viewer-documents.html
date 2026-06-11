@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documents â€” Stackly Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dash-page">
+    <div class="db-sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="db-sidebar" id="dbSidebar">
+      <div class="db-sidebar-logo">
+        <a href="../index.html"
+          ><img src="../assets/images/logoStackly.webp" alt="Stackly"
+        /></a>
+      </div>
+      <div class="db-sidebar-user">
+        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div style="min-width: 0">
+          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
+          <div class="db-user-role" id="sidebarRole">â€”</div>
+        </div>
+      </div>
+      <nav class="db-nav" id="dbNav"></nav>
+      <div class="db-sidebar-bottom">
+        <button class="db-logout-btn" id="logoutBtn">
+          <span style="font-size: 16px">ðŸšª</span> Sign Out
+        </button>
+      </div>
+    </aside>
+    <div class="db-main">
+      <header class="db-topbar">
+        <div class="db-topbar-left">
+          <button class="db-hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div class="db-page-title">Documents</div>
+            <div class="db-breadcrumb">Stackly / <span>Viewer</span></div>
+          </div>
+        </div>
+        <div class="db-topbar-right">
+          <div class="db-search">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            Search docsâ€¦
+          </div>
+          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+        </div>
+      </header>
+      <main class="db-content">
+        <div class="pg-header">
+          <div class="pg-title">Documents ðŸ“„</div>
+          <div class="pg-sub">
+            Shared documentation, guides and reference material for your
+            workspace.
+          </div>
+        </div>
+
+        <div class="pg-grid-3">
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ“˜</span> Getting Started</div>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 14px;
+                "
+              >
+                Everything you need to get up and running with Stackly in less
+                than 10 minutes.
+              </div>
+              <div class="pg-chip-row" style="margin-bottom: 14px">
+                <span class="pg-chip green">Beginner</span
+                ><span class="pg-chip">5 min read</span>
+              </div>
+              <button
+                class="btn-db-primary"
+                style="width: 100%; justify-content: center"
+              >
+                Read â†’
+              </button>
+            </div>
+          </div>
+
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ“Š</span> Dashboard Guide</div>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 14px;
+                "
+              >
+                How to read and interpret every chart, metric and widget in your
+                dashboard.
+              </div>
+              <div class="pg-chip-row" style="margin-bottom: 14px">
+                <span class="pg-chip blue">Intermediate</span
+                ><span class="pg-chip">8 min read</span>
+              </div>
+              <button
+                class="btn-db-primary"
+                style="width: 100%; justify-content: center"
+              >
+                Read â†’
+              </button>
+            </div>
+          </div>
+
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title">
+                <span>ðŸ””</span> Alerts & Notifications
+              </div>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 14px;
+                "
+              >
+                Set up smart alerts so you're always notified when metrics cross
+                important thresholds.
+              </div>
+              <div class="pg-chip-row" style="margin-bottom: 14px">
+                <span class="pg-chip">General</span
+                ><span class="pg-chip">4 min read</span>
+              </div>
+              <button
+                class="btn-db-primary"
+                style="width: 100%; justify-content: center"
+              >
+                Read â†’
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="db-widget">
+          <div class="db-widget-header">
+            <div class="db-widget-title"><span>ðŸ“‹</span> All Documents</div>
+          </div>
+          <div class="db-widget-body" style="padding: 0">
+            <div class="pg-dataset-row">
+              <div
+                class="pg-dataset-icon"
+                style="background: rgba(108, 99, 255, 0.15)"
+              >
+                ðŸ“˜
+              </div>
+              <div class="pg-dataset-info">
+                <div class="pg-dataset-name">Getting Started with Stackly</div>
+                <div class="pg-dataset-meta">
+                  Shared Â· Last updated 1 week ago Â· 5 min read
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px; align-items: center">
+                <button
+                  class="btn-db-ghost"
+                  style="padding: 5px 12px; font-size: 0.78rem"
+                >
+                  Read
+                </button>
+              </div>
+            </div>
+            <div class="pg-dataset-row">
+              <div
+                class="pg-dataset-icon"
+                style="background: rgba(0, 212, 255, 0.12)"
+              >
+                ðŸ“Š
+              </div>
+              <div class="pg-dataset-info">
+                <div class="pg-dataset-name">Understanding Your Dashboard</div>
+                <div class="pg-dataset-meta">
+                  Shared Â· Last updated 2 weeks ago Â· 8 min read
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px; align-items: center">
+                <button
+                  class="btn-db-ghost"
+                  style="padding: 5px 12px; font-size: 0.78rem"
+                >
+                  Read
+                </button>
+              </div>
+            </div>
+            <div class="pg-dataset-row">
+              <div
+                class="pg-dataset-icon"
+                style="background: rgba(0, 255, 163, 0.12)"
+              >
+                ðŸ””
+              </div>
+              <div class="pg-dataset-info">
+                <div class="pg-dataset-name">Alerts & Notification Setup</div>
+                <div class="pg-dataset-meta">
+                  Shared Â· Last updated 3 weeks ago Â· 4 min read
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px; align-items: center">
+                <button
+                  class="btn-db-ghost"
+                  style="padding: 5px 12px; font-size: 0.78rem"
+                >
+                  Read
+                </button>
+              </div>
+            </div>
+            <div class="pg-dataset-row">
+              <div
+                class="pg-dataset-icon"
+                style="background: rgba(255, 170, 107, 0.12)"
+              >
+                ðŸ¤
+              </div>
+              <div class="pg-dataset-info">
+                <div class="pg-dataset-name">
+                  Team Collaboration Best Practices
+                </div>
+                <div class="pg-dataset-meta">
+                  Shared Â· Last updated 1 month ago Â· 6 min read
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px; align-items: center">
+                <button
+                  class="btn-db-ghost"
+                  style="padding: 5px 12px; font-size: 0.78rem"
+                >
+                  Read
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+      bootShell(
+        "viewer-documents.html",
+        "Access all shared documentation and guides for your workspace.",
+      );
+    </script>
+  <script src=../assets/js/404-redirect.js></script>`n </body>
+</html>
+

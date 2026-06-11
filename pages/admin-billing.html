@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing â€” Stackly Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dash-page">
+    <div class="db-sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="db-sidebar" id="dbSidebar">
+      <div class="db-sidebar-logo">
+        <a href="../index.html"
+          ><img src="../assets/images/logoStackly.webp" alt="Stackly"
+        /></a>
+      </div>
+      <div class="db-sidebar-user">
+        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div style="min-width: 0">
+          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
+          <div class="db-user-role" id="sidebarRole">â€”</div>
+        </div>
+      </div>
+      <nav class="db-nav" id="dbNav"></nav>
+      <div class="db-sidebar-bottom">
+        <button class="db-logout-btn" id="logoutBtn">
+          <span style="font-size: 16px">ðŸšª</span> Sign Out
+        </button>
+      </div>
+    </aside>
+    <div class="db-main">
+      <header class="db-topbar">
+        <div class="db-topbar-left">
+          <button class="db-hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div class="db-page-title">Billing</div>
+            <div class="db-breadcrumb">
+              Stackly / <span>Billing & Revenue</span>
+            </div>
+          </div>
+        </div>
+        <div class="db-topbar-right">
+          <div class="db-search">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            Searchâ€¦
+          </div>
+          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+        </div>
+      </header>
+      <main class="db-content">
+        <div class="pg-header">
+          <div class="pg-title">Billing & Revenue ðŸ’³</div>
+          <div class="pg-sub">
+            Track subscriptions, invoices, MRR and payment health across all
+            accounts.
+          </div>
+          <div class="pg-actions">
+            <button class="btn-db-primary">ï¼‹ Create Invoice</button
+            ><button class="btn-db-ghost">ðŸ“¤ Export</button>
+          </div>
+        </div>
+
+        <div class="pg-grid-4">
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸ’°</span>
+            <div class="pg-metric-val">$284K</div>
+            <div class="pg-metric-label">Revenue MTD</div>
+            <div class="pg-metric-trend trend-up">â†‘ 18.2%</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸ“…</span>
+            <div class="pg-metric-val">$148K</div>
+            <div class="pg-metric-label">MRR</div>
+            <div class="pg-metric-trend trend-up">â†‘ 8.4% MoM</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">âš ï¸</span>
+            <div class="pg-metric-val">$3,240</div>
+            <div class="pg-metric-label">Outstanding Invoices</div>
+            <div class="pg-metric-trend trend-down">4 overdue</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸ“ˆ</span>
+            <div class="pg-metric-val">$18K</div>
+            <div class="pg-metric-label">ARR Growth (MoM)</div>
+            <div class="pg-metric-trend trend-up">â†‘ Trending up</div>
+          </div>
+        </div>
+
+        <div class="pg-grid-main-side">
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ§¾</span> Recent Invoices</div>
+              <button class="db-widget-action">View All</button>
+            </div>
+            <div class="db-widget-body" style="padding: 0">
+              <div class="pg-invoice-item">
+                <div
+                  class="pg-invoice-icon"
+                  style="background: rgba(0, 255, 163, 0.1)"
+                >
+                  ðŸ¢
+                </div>
+                <div class="pg-invoice-info">
+                  <div class="pg-invoice-name">Orbit Labs â€” Enterprise</div>
+                  <div class="pg-invoice-date">Nov 1, 2024</div>
+                </div>
+                <div>
+                  <div class="pg-invoice-amount">$12,400</div>
+                  <div class="pg-invoice-status">
+                    <span class="db-status-pill pill-active">Paid</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pg-invoice-item">
+                <div
+                  class="pg-invoice-icon"
+                  style="background: rgba(108, 99, 255, 0.1)"
+                >
+                  ðŸ¢
+                </div>
+                <div class="pg-invoice-info">
+                  <div class="pg-invoice-name">Axiom Corp â€” Enterprise</div>
+                  <div class="pg-invoice-date">Nov 1, 2024</div>
+                </div>
+                <div>
+                  <div class="pg-invoice-amount">$9,800</div>
+                  <div class="pg-invoice-status">
+                    <span class="db-status-pill pill-active">Paid</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pg-invoice-item">
+                <div
+                  class="pg-invoice-icon"
+                  style="background: rgba(0, 212, 255, 0.1)"
+                >
+                  ðŸ¢
+                </div>
+                <div class="pg-invoice-info">
+                  <div class="pg-invoice-name">Nexaflow â€” SaaS Pro</div>
+                  <div class="pg-invoice-date">Nov 1, 2024</div>
+                </div>
+                <div>
+                  <div class="pg-invoice-amount">$4,200</div>
+                  <div class="pg-invoice-status">
+                    <span class="db-status-pill pill-active">Paid</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pg-invoice-item">
+                <div
+                  class="pg-invoice-icon"
+                  style="background: rgba(255, 107, 107, 0.1)"
+                >
+                  ðŸ¢
+                </div>
+                <div class="pg-invoice-info">
+                  <div class="pg-invoice-name">DataSphere â€” SaaS Pro</div>
+                  <div class="pg-invoice-date">Oct 28, 2024</div>
+                </div>
+                <div>
+                  <div class="pg-invoice-amount">$3,600</div>
+                  <div class="pg-invoice-status">
+                    <span class="db-status-pill pill-danger">Overdue</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pg-invoice-item">
+                <div
+                  class="pg-invoice-icon"
+                  style="background: rgba(255, 255, 255, 0.04)"
+                >
+                  ðŸ¢
+                </div>
+                <div class="pg-invoice-info">
+                  <div class="pg-invoice-name">CloudVault â€” Starter</div>
+                  <div class="pg-invoice-date">Oct 31, 2024</div>
+                </div>
+                <div>
+                  <div class="pg-invoice-amount">$1,200</div>
+                  <div class="pg-invoice-status">
+                    <span class="db-status-pill pill-pending">Pending</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 20px">
+            <div class="db-widget">
+              <div class="db-widget-header">
+                <div class="db-widget-title">
+                  <span>ðŸ“Š</span> Revenue by Plan
+                </div>
+              </div>
+              <div class="db-widget-body">
+                <div class="db-donut-wrap">
+                  <svg
+                    class="db-donut"
+                    viewBox="0 0 120 120"
+                    id="billingDonut"
+                  ></svg>
+                  <div class="db-donut-legend">
+                    <div class="db-legend-item">
+                      <span
+                        class="db-legend-dot"
+                        style="background: #6c63ff"
+                      ></span
+                      >Enterprise<span class="db-legend-val">52%</span>
+                    </div>
+                    <div class="db-legend-item">
+                      <span
+                        class="db-legend-dot"
+                        style="background: #00d4ff"
+                      ></span
+                      >SaaS Pro<span class="db-legend-val">34%</span>
+                    </div>
+                    <div class="db-legend-item">
+                      <span
+                        class="db-legend-dot"
+                        style="background: #00ffa3"
+                      ></span
+                      >Starter<span class="db-legend-val">14%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="db-widget">
+              <div class="db-widget-header">
+                <div class="db-widget-title">
+                  <span>âš ï¸</span> Payment Alerts
+                </div>
+              </div>
+              <div class="db-widget-body" style="padding-top: 8px">
+                <div class="db-notif-item">
+                  <span
+                    class="db-notif-dot"
+                    style="background: #ff6b6b; box-shadow: 0 0 5px #ff6b6b"
+                  ></span>
+                  <div class="db-notif-msg">
+                    <strong>DataSphere</strong> invoice overdue by 3 days
+                  </div>
+                  <span class="db-notif-when">Now</span>
+                </div>
+                <div class="db-notif-item">
+                  <span
+                    class="db-notif-dot"
+                    style="background: #ffaa6b; box-shadow: 0 0 5px #ffaa6b"
+                  ></span>
+                  <div class="db-notif-msg">
+                    <strong>CloudVault</strong> payment pending
+                  </div>
+                  <span class="db-notif-when">1d ago</span>
+                </div>
+                <div class="db-notif-item">
+                  <span
+                    class="db-notif-dot"
+                    style="background: #00ffa3; box-shadow: 0 0 5px #00ffa3"
+                  ></span>
+                  <div class="db-notif-msg">
+                    <strong>Orbit Labs</strong> auto-renewed successfully
+                  </div>
+                  <span class="db-notif-when">2d ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+      bootShell(
+        "admin-billing.html",
+        "Track all revenue, subscriptions and payment health.",
+      );
+      const d = [
+        { val: 52, color: "#6c63ff" },
+        { val: 34, color: "#00d4ff" },
+        { val: 14, color: "#00ffa3" },
+      ];
+      const tot = d.reduce((s, x) => s + x.val, 0),
+        R = 40,
+        cx = 60,
+        cy = 60,
+        st = 18,
+        ci = 2 * Math.PI * R;
+      let off = 0,
+        p = "";
+      d.forEach((x) => {
+        const da = (x.val / tot) * ci,
+          ga = ci - da;
+        p += `<circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="${x.color}" stroke-width="${st}" stroke-dasharray="${da} ${ga}" stroke-dashoffset="${-off}" transform="rotate(-90 ${cx} ${cy})"/>`;
+        off += da;
+      });
+      p += `<text x="${cx}" y="${cy + 4}" text-anchor="middle" fill="#fff" font-size="11" font-weight="800">MRR</text>`;
+      document.getElementById("billingDonut").innerHTML = p;
+    </script>
+  <script src=../assets/js/404-redirect.js></script>`n </body>
+</html>
+

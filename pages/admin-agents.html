@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Agents â€” Stackly Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dash-page">
+    <div class="db-sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="db-sidebar" id="dbSidebar">
+      <div class="db-sidebar-logo">
+        <a href="../index.html"
+          ><img src="../assets/images/logoStackly.webp" alt="Stackly"
+        /></a>
+      </div>
+      <div class="db-sidebar-user">
+        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div style="min-width: 0">
+          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
+          <div class="db-user-role" id="sidebarRole">â€”</div>
+        </div>
+      </div>
+      <nav class="db-nav" id="dbNav"></nav>
+      <div class="db-sidebar-bottom">
+        <button class="db-logout-btn" id="logoutBtn">
+          <span style="font-size: 16px">ðŸšª</span> Sign Out
+        </button>
+      </div>
+    </aside>
+    <div class="db-main">
+      <header class="db-topbar">
+        <div class="db-topbar-left">
+          <button class="db-hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div class="db-page-title">AI Agents</div>
+            <div class="db-breadcrumb">
+              Stackly / <span>AI & Automation</span>
+            </div>
+          </div>
+        </div>
+        <div class="db-topbar-right">
+          <div class="db-search">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            Search agentsâ€¦
+          </div>
+          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+        </div>
+      </header>
+      <main class="db-content">
+        <div class="pg-header">
+          <div class="pg-title">AI Agents ðŸ¤–</div>
+          <div class="pg-sub">
+            Deploy, monitor and manage all intelligent automation agents running
+            on Stackly.
+          </div>
+          <div class="pg-actions">
+            <button class="btn-db-primary">ï¼‹ Deploy Agent</button
+            ><button class="btn-db-ghost">ðŸ“‹ View Logs</button>
+          </div>
+        </div>
+
+        <div class="pg-grid-4">
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸ¤–</span>
+            <div class="pg-metric-val">5</div>
+            <div class="pg-metric-label">Active Agents</div>
+            <div class="pg-metric-trend trend-up">All running</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">âš¡</span>
+            <div class="pg-metric-val">1.4M</div>
+            <div class="pg-metric-label">Operations Today</div>
+            <div class="pg-metric-trend trend-up">â†‘ 31% WoW</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">âœ…</span>
+            <div class="pg-metric-val">99.7%</div>
+            <div class="pg-metric-label">Success Rate</div>
+            <div class="pg-metric-trend trend-up">Above target</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸ›</span>
+            <div class="pg-metric-val">2</div>
+            <div class="pg-metric-label">Errors (24h)</div>
+            <div class="pg-metric-trend trend-down">Needs attention</div>
+          </div>
+        </div>
+
+        <!-- Agent Cards -->
+        <div class="pg-grid-3">
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ§ </span> Nexus AI</div>
+              <span class="db-agent-status status-running">running</span>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 14px;
+                "
+              >
+                Core NLP engine â€” processes user queries, classifies intent and
+                routes requests intelligently.
+              </div>
+              <div class="pg-chip-row" style="margin-bottom: 14px">
+                <span class="pg-chip blue">NLP</span
+                ><span class="pg-chip green">42K ops/h</span>
+              </div>
+              <div class="db-progress">
+                <div class="db-progress-fill" style="width: 78%"></div>
+              </div>
+              <div
+                style="
+                  font-size: 0.72rem;
+                  color: var(--clr-muted);
+                  margin-top: 4px;
+                "
+              >
+                78% CPU utilization
+              </div>
+              <div style="margin-top: 14px; display: flex; gap: 8px">
+                <button
+                  class="btn-db-ghost"
+                  style="padding: 5px 14px; font-size: 0.78rem"
+                >
+                  Pause</button
+                ><button
+                  class="btn-db-primary"
+                  style="padding: 5px 14px; font-size: 0.78rem"
+                >
+                  View Logs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ“Š</span> Analyst Bot</div>
+              <span class="db-agent-status status-running">running</span>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 14px;
+                "
+              >
+                Automated data analysis and report generation from platform
+                telemetry and user activity.
+              </div>
+              <div class="pg-chip-row" style="margin-bottom: 14px">
+                <span class="pg-chip">Analytics</span
+                ><span class="pg-chip blue">18K ops/h</span>
+              </div>
+              <div class="db-progress">
+                <div class="db-progress-fill accent" style="width: 54%"></div>
+              </div>
+              <div
+                style="
+                  font-size: 0.72rem;
+                  color: var(--clr-muted);
+                  margin-top: 4px;
+                "
+              >
+                54% CPU utilization
+              </div>
+              <div style="margin-top: 14px; display: flex; gap: 8px">
+                <button
+                  class="btn-db-ghost"
+                  style="padding: 5px 14px; font-size: 0.78rem"
+                >
+                  Pause</button
+                ><button
+                  class="btn-db-primary"
+                  style="padding: 5px 14px; font-size: 0.78rem"
+                >
+                  View Logs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ”’</span> SecureGuard</div>
+              <span class="db-agent-status status-running">running</span>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 14px;
+                "
+              >
+                Real-time threat detection, anomaly scoring and automated
+                security incident response.
+              </div>
+              <div class="pg-chip-row" style="margin-bottom: 14px">
+                <span class="pg-chip red">Security</span
+                ><span class="pg-chip green">12 endpoints</span>
+              </div>
+              <div class="db-progress">
+                <div class="db-progress-fill" style="width: 32%"></div>
+              </div>
+              <div
+                style="
+                  font-size: 0.72rem;
+                  color: var(--clr-muted);
+                  margin-top: 4px;
+                "
+              >
+                32% CPU utilization
+              </div>
+              <div style="margin-top: 14px; display: flex; gap: 8px">
+                <button
+                  class="btn-db-ghost"
+                  style="padding: 5px 14px; font-size: 0.78rem"
+                >
+                  Configure</button
+                ><button
+                  class="btn-db-primary"
+                  style="padding: 5px 14px; font-size: 0.78rem"
+                >
+                  View Logs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ“§</span> Mailer Agent</div>
+              <span class="db-agent-status status-idle">idle</span>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 14px;
+                "
+              >
+                Smart email routing and notification delivery with
+                personalization and A/B testing.
+              </div>
+              <div class="pg-chip-row" style="margin-bottom: 14px">
+                <span class="pg-chip orange">Email</span
+                ><span
+                  class="pg-chip"
+                  style="
+                    background: rgba(255, 255, 255, 0.05);
+                    color: var(--clr-muted);
+                  "
+                  >Queue empty</span
+                >
+              </div>
+              <div class="db-progress">
+                <div class="db-progress-fill warn" style="width: 8%"></div>
+              </div>
+              <div
+                style="
+                  font-size: 0.72rem;
+                  color: var(--clr-muted);
+                  margin-top: 4px;
+                "
+              >
+                8% CPU utilization
+              </div>
+              <div style="margin-top: 14px; display: flex; gap: 8px">
+                <button
+                  class="btn-db-ghost"
+                  style="padding: 5px 14px; font-size: 0.78rem"
+                >
+                  Configure</button
+                ><button
+                  class="btn-db-primary"
+                  style="padding: 5px 14px; font-size: 0.78rem"
+                >
+                  View Logs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ”„</span> Sync Engine</div>
+              <span class="db-agent-status status-queued">queued</span>
+            </div>
+            <div class="db-widget-body">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--clr-muted);
+                  margin-bottom: 14px;
+                "
+              >
+                Cross-platform data synchronization between integrations,
+                pipelines and the data warehouse.
+              </div>
+              <div class="pg-chip-row" style="margin-bottom: 14px">
+                <span class="pg-chip">Sync</span
+                ><span class="pg-chip blue">3 jobs queued</span>
+              </div>
+              <div class="db-progress">
+                <div class="db-progress-fill accent" style="width: 0%"></div>
+              </div>
+              <div
+                style="
+                  font-size: 0.72rem;
+                  color: var(--clr-muted);
+                  margin-top: 4px;
+                "
+              >
+                Awaiting trigger
+              </div>
+              <div style="margin-top: 14px; display: flex; gap: 8px">
+                <button
+                  class="btn-db-ghost"
+                  style="padding: 5px 14px; font-size: 0.78rem"
+                >
+                  Run Now</button
+                ><button
+                  class="btn-db-primary"
+                  style="padding: 5px 14px; font-size: 0.78rem"
+                >
+                  View Logs
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agent Activity Log -->
+        <div class="db-widget">
+          <div class="db-widget-header">
+            <div class="db-widget-title">
+              <span>ðŸ“‹</span> Agent Activity Log
+            </div>
+            <button class="db-widget-action">Clear</button>
+          </div>
+          <div class="db-widget-body" style="padding-top: 8px">
+            <div class="pg-timeline">
+              <div class="pg-tl-item">
+                <div class="pg-tl-dot" style="background: #00ffa3"></div>
+                <div class="pg-tl-body">
+                  <div class="pg-tl-title">Nexus AI processed batch #4812</div>
+                  <div class="pg-tl-desc">
+                    42,140 records classified â€” 99.8% accuracy rate
+                  </div>
+                </div>
+                <div class="pg-tl-time">2m ago</div>
+              </div>
+              <div class="pg-tl-item">
+                <div class="pg-tl-dot" style="background: #6c63ff"></div>
+                <div class="pg-tl-body">
+                  <div class="pg-tl-title">
+                    Analyst Bot generated Weekly Digest
+                  </div>
+                  <div class="pg-tl-desc">
+                    Report compiled and sent to 5 stakeholders
+                  </div>
+                </div>
+                <div class="pg-tl-time">18m ago</div>
+              </div>
+              <div class="pg-tl-item">
+                <div class="pg-tl-dot" style="background: #ff6b6b"></div>
+                <div class="pg-tl-body">
+                  <div class="pg-tl-title">
+                    SecureGuard flagged anomaly #201
+                  </div>
+                  <div class="pg-tl-desc">
+                    Unusual API access from IP 185.x.x.x â€” blocked automatically
+                  </div>
+                </div>
+                <div class="pg-tl-time">42m ago</div>
+              </div>
+              <div class="pg-tl-item">
+                <div class="pg-tl-dot" style="background: #00d4ff"></div>
+                <div class="pg-tl-body">
+                  <div class="pg-tl-title">
+                    Sync Engine completed pipeline #67
+                  </div>
+                  <div class="pg-tl-desc">
+                    Stripe â†” Stackly sync â€” 1,240 records updated
+                  </div>
+                </div>
+                <div class="pg-tl-time">1h ago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+      bootShell(
+        "admin-agents.html",
+        "Monitor and control all AI agents running across the platform.",
+      );
+    </script>
+  <script src=../assets/js/404-redirect.js></script>`n </body>
+</html>
+

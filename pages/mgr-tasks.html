@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Board â€” Stackly Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dash-page">
+    <div class="db-sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="db-sidebar" id="dbSidebar">
+      <div class="db-sidebar-logo">
+        <a href="../index.html"
+          ><img src="../assets/images/logoStackly.webp" alt="Stackly"
+        /></a>
+      </div>
+      <div class="db-sidebar-user">
+        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div style="min-width: 0">
+          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
+          <div class="db-user-role" id="sidebarRole">â€”</div>
+        </div>
+      </div>
+      <nav class="db-nav" id="dbNav"></nav>
+      <div class="db-sidebar-bottom">
+        <button class="db-logout-btn" id="logoutBtn">
+          <span style="font-size: 16px">ðŸšª</span> Sign Out
+        </button>
+      </div>
+    </aside>
+    <div class="db-main">
+      <header class="db-topbar">
+        <div class="db-topbar-left">
+          <button class="db-hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div class="db-page-title">Task Board</div>
+            <div class="db-breadcrumb">
+              Stackly / <span>Team Â· Sprint 14</span>
+            </div>
+          </div>
+        </div>
+        <div class="db-topbar-right">
+          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+        </div>
+      </header>
+      <main class="db-content">
+        <div class="pg-header">
+          <div class="pg-title">Task Board âœ…</div>
+          <div class="pg-sub">
+            Sprint 14 (Oct 28 â€“ Nov 8) Â· 84% completion Â· 6 days remaining
+          </div>
+          <div class="pg-actions">
+            <button class="btn-db-primary">ï¼‹ Add Task</button
+            ><button class="btn-db-ghost">ðŸ“Š Sprint Report</button>
+          </div>
+        </div>
+
+        <!-- Kanban -->
+        <div class="pg-kanban">
+          <div class="pg-kanban-col">
+            <div class="pg-kanban-col-title">
+              Backlog<span class="pg-kanban-count">4</span>
+            </div>
+            <div class="pg-card">
+              <div class="pg-card-title">Update onboarding flow copy</div>
+              <div class="pg-card-meta">Design Â· Low priority</div>
+              <div class="pg-card-footer">
+                <span class="pg-chip" style="font-size: 0.68rem">Tom H.</span
+                ><span style="font-size: 0.7rem; color: var(--clr-muted)"
+                  >Dec 5</span
+                >
+              </div>
+            </div>
+            <div class="pg-card">
+              <div class="pg-card-title">Add CSV import to analytics</div>
+              <div class="pg-card-meta">Development Â· Medium</div>
+              <div class="pg-card-footer">
+                <span class="pg-chip" style="font-size: 0.68rem">Elena M.</span
+                ><span style="font-size: 0.7rem; color: var(--clr-muted)"
+                  >Dec 12</span
+                >
+              </div>
+            </div>
+            <div class="pg-card">
+              <div class="pg-card-title">Slack integration v2</div>
+              <div class="pg-card-meta">Integration Â· Medium</div>
+              <div class="pg-card-footer">
+                <span class="pg-chip" style="font-size: 0.68rem">James L.</span
+                ><span style="font-size: 0.7rem; color: var(--clr-muted)"
+                  >Dec 20</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="pg-kanban-col">
+            <div class="pg-kanban-col-title">
+              In Progress<span class="pg-kanban-count">5</span>
+            </div>
+            <div class="pg-card" style="border-color: rgba(108, 99, 255, 0.3)">
+              <div class="pg-card-title">API v3 schema migration</div>
+              <div class="pg-card-meta">Development Â· High</div>
+              <div class="pg-card-footer">
+                <span class="pg-chip" style="font-size: 0.68rem">Sarah K.</span
+                ><span style="font-size: 0.7rem; color: var(--clr-accent)"
+                  >Nov 8</span
+                >
+              </div>
+            </div>
+            <div class="pg-card" style="border-color: rgba(108, 99, 255, 0.3)">
+              <div class="pg-card-title">Performance optimization pass</div>
+              <div class="pg-card-meta">Engineering Â· High</div>
+              <div class="pg-card-footer">
+                <span class="pg-chip" style="font-size: 0.68rem">Marcus R.</span
+                ><span style="font-size: 0.7rem; color: var(--clr-accent)"
+                  >Nov 7</span
+                >
+              </div>
+            </div>
+            <div class="pg-card">
+              <div class="pg-card-title">Q3 cohort analysis</div>
+              <div class="pg-card-meta">Analytics Â· Medium</div>
+              <div class="pg-card-footer">
+                <span class="pg-chip" style="font-size: 0.68rem">Priya N.</span
+                ><span style="font-size: 0.7rem; color: var(--clr-muted)"
+                  >Nov 8</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="pg-kanban-col">
+            <div class="pg-kanban-col-title">
+              Review<span class="pg-kanban-count">3</span>
+            </div>
+            <div class="pg-card">
+              <div class="pg-card-title">Redesign billing page UI</div>
+              <div class="pg-card-meta">Design Â· Medium</div>
+              <div class="pg-card-footer">
+                <span class="pg-chip" style="font-size: 0.68rem">Tom H.</span
+                ><span style="font-size: 0.7rem; color: var(--clr-muted)"
+                  >Nov 5</span
+                >
+              </div>
+            </div>
+            <div class="pg-card">
+              <div class="pg-card-title">Webhook delivery retry logic</div>
+              <div class="pg-card-meta">Dev Â· High</div>
+              <div class="pg-card-footer">
+                <span class="pg-chip" style="font-size: 0.68rem">Elena M.</span
+                ><span style="font-size: 0.7rem; color: var(--clr-accent)"
+                  >Nov 4</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="pg-kanban-col">
+            <div class="pg-kanban-col-title" style="color: var(--clr-green)">
+              Done âœ”<span
+                class="pg-kanban-count"
+                style="
+                  background: rgba(0, 255, 163, 0.12);
+                  color: var(--clr-green);
+                "
+                >8</span
+              >
+            </div>
+            <div class="pg-card" style="opacity: 0.7">
+              <div class="pg-card-title">Deploy v2.4.1 to production</div>
+              <div class="pg-card-meta">DevOps Â· âœ” Done</div>
+              <div class="pg-card-footer">
+                <span class="pg-chip green" style="font-size: 0.68rem"
+                  >Sarah K.</span
+                >
+              </div>
+            </div>
+            <div class="pg-card" style="opacity: 0.7">
+              <div class="pg-card-title">Unit test coverage to 86%</div>
+              <div class="pg-card-meta">QA Â· âœ” Done</div>
+              <div class="pg-card-footer">
+                <span class="pg-chip green" style="font-size: 0.68rem"
+                  >Marcus R.</span
+                >
+              </div>
+            </div>
+            <div class="pg-card" style="opacity: 0.7">
+              <div class="pg-card-title">Q3 Analytics report published</div>
+              <div class="pg-card-meta">Analytics Â· âœ” Done</div>
+              <div class="pg-card-footer">
+                <span class="pg-chip green" style="font-size: 0.68rem"
+                  >Priya N.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+      bootShell(
+        "mgr-tasks.html",
+        "Sprint 14 kanban â€” manage your team's tasks and unblock progress.",
+      );
+    </script>
+  <script src=../assets/js/404-redirect.js></script>`n </body>
+</html>
+

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Export Center â€” Stackly Analyst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dash-page">
+    <div class="db-sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="db-sidebar" id="dbSidebar">
+      <div class="db-sidebar-logo">
+        <a href="../index.html"
+          ><img src="../assets/images/logoStackly.webp" alt="Stackly"
+        /></a>
+      </div>
+      <div class="db-sidebar-user">
+        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div style="min-width: 0">
+          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
+          <div class="db-user-role" id="sidebarRole">â€”</div>
+        </div>
+      </div>
+      <nav class="db-nav" id="dbNav"></nav>
+      <div class="db-sidebar-bottom">
+        <button class="db-logout-btn" id="logoutBtn">
+          <span style="font-size: 16px">ðŸšª</span> Sign Out
+        </button>
+      </div>
+    </aside>
+    <div class="db-main">
+      <header class="db-topbar">
+        <div class="db-topbar-left">
+          <button class="db-hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div class="db-page-title">Export Center</div>
+            <div class="db-breadcrumb">Stackly / <span>Exports</span></div>
+          </div>
+        </div>
+        <div class="db-topbar-right">
+          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+        </div>
+      </header>
+      <main class="db-content">
+        <div class="pg-header">
+          <div class="pg-title">Export Center ðŸ“¤</div>
+          <div class="pg-sub">
+            Export your data in CSV, JSON, Excel or Google Sheets â€” instantly or
+            on a schedule.
+          </div>
+          <div class="pg-actions">
+            <button class="btn-db-primary">ï¼‹ New Export</button>
+          </div>
+        </div>
+
+        <div class="pg-grid-3">
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ“Š</span> Quick Export</div>
+            </div>
+            <div class="db-widget-body">
+              <div style="display: flex; flex-direction: column; gap: 12px">
+                <div>
+                  <label
+                    style="
+                      font-size: 0.8rem;
+                      color: var(--clr-muted);
+                      font-weight: 600;
+                      display: block;
+                      margin-bottom: 6px;
+                    "
+                    >Dataset</label
+                  ><select
+                    style="
+                      width: 100%;
+                      background: rgba(255, 255, 255, 0.04);
+                      border: 1px solid var(--clr-border);
+                      border-radius: var(--radius-sm);
+                      padding: 10px 14px;
+                      font-size: 0.85rem;
+                      color: var(--clr-white);
+                      font-family: inherit;
+                      outline: none;
+                    "
+                  >
+                    <option>users_events_prod</option>
+                    <option>stripe_payments_sync</option>
+                    <option>marketing_campaigns_q3</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    style="
+                      font-size: 0.8rem;
+                      color: var(--clr-muted);
+                      font-weight: 600;
+                      display: block;
+                      margin-bottom: 6px;
+                    "
+                    >Format</label
+                  ><select
+                    style="
+                      width: 100%;
+                      background: rgba(255, 255, 255, 0.04);
+                      border: 1px solid var(--clr-border);
+                      border-radius: var(--radius-sm);
+                      padding: 10px 14px;
+                      font-size: 0.85rem;
+                      color: var(--clr-white);
+                      font-family: inherit;
+                      outline: none;
+                    "
+                  >
+                    <option>CSV</option>
+                    <option>JSON</option>
+                    <option>Excel (.xlsx)</option>
+                    <option>Parquet</option>
+                  </select>
+                </div>
+                <button
+                  class="btn-db-primary"
+                  style="width: 100%; justify-content: center"
+                >
+                  ðŸ“¤ Export Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ“‹</span> Recent Exports</div>
+            </div>
+            <div class="db-widget-body" style="padding-top: 8px">
+              <div class="pg-timeline">
+                <div class="pg-tl-item">
+                  <div class="pg-tl-dot" style="background: #00ffa3"></div>
+                  <div class="pg-tl-body">
+                    <div class="pg-tl-title">funnel_oct2024.csv</div>
+                    <div class="pg-tl-desc">
+                      1.2 MB Â· users_events_prod Â· 48K rows
+                    </div>
+                  </div>
+                  <div class="pg-tl-time">2h ago</div>
+                </div>
+                <div class="pg-tl-item">
+                  <div class="pg-tl-dot" style="background: #6c63ff"></div>
+                  <div class="pg-tl-body">
+                    <div class="pg-tl-title">q3_analytics.xlsx</div>
+                    <div class="pg-tl-desc">4.8 MB Â· Multiple datasets</div>
+                  </div>
+                  <div class="pg-tl-time">1d ago</div>
+                </div>
+                <div class="pg-tl-item">
+                  <div class="pg-tl-dot" style="background: #00d4ff"></div>
+                  <div class="pg-tl-body">
+                    <div class="pg-tl-title">traffic_sources.json</div>
+                    <div class="pg-tl-desc">
+                      840 KB Â· marketing_campaigns_q3
+                    </div>
+                  </div>
+                  <div class="pg-tl-time">3d ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ“Š</span> Export Stats</div>
+            </div>
+            <div class="db-widget-body" style="padding-top: 12px">
+              <div style="display: flex; flex-direction: column; gap: 12px">
+                <div style="display: flex; justify-content: space-between">
+                  <span style="font-size: 0.82rem; color: var(--clr-muted)"
+                    >Exports this month</span
+                  ><span
+                    style="
+                      font-size: 0.82rem;
+                      color: var(--clr-white);
+                      font-weight: 600;
+                    "
+                    >28</span
+                  >
+                </div>
+                <div style="display: flex; justify-content: space-between">
+                  <span style="font-size: 0.82rem; color: var(--clr-muted)"
+                    >Total data exported</span
+                  ><span
+                    style="
+                      font-size: 0.82rem;
+                      color: var(--clr-white);
+                      font-weight: 600;
+                    "
+                    >2.4 GB</span
+                  >
+                </div>
+                <div style="display: flex; justify-content: space-between">
+                  <span style="font-size: 0.82rem; color: var(--clr-muted)"
+                    >Scheduled exports</span
+                  ><span
+                    style="
+                      font-size: 0.82rem;
+                      color: var(--clr-white);
+                      font-weight: 600;
+                    "
+                    >2 active</span
+                  >
+                </div>
+                <div style="display: flex; justify-content: space-between">
+                  <span style="font-size: 0.82rem; color: var(--clr-muted)"
+                    >Storage used</span
+                  ><span
+                    style="
+                      font-size: 0.82rem;
+                      color: var(--clr-green);
+                      font-weight: 600;
+                    "
+                    >8.6 MB</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+      bootShell(
+        "analyst-exports.html",
+        "Export any dataset in any format â€” instantly or on a schedule.",
+      );
+    </script>
+  <script src=../assets/js/404-redirect.js></script>`n </body>
+</html>
+

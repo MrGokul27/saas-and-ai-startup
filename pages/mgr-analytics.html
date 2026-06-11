@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Analytics â€” Stackly Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dash-page">
+    <div class="db-sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="db-sidebar" id="dbSidebar">
+      <div class="db-sidebar-logo">
+        <a href="../index.html"
+          ><img src="../assets/images/logoStackly.webp" alt="Stackly"
+        /></a>
+      </div>
+      <div class="db-sidebar-user">
+        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div style="min-width: 0">
+          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
+          <div class="db-user-role" id="sidebarRole">â€”</div>
+        </div>
+      </div>
+      <nav class="db-nav" id="dbNav"></nav>
+      <div class="db-sidebar-bottom">
+        <button class="db-logout-btn" id="logoutBtn">
+          <span style="font-size: 16px">ðŸšª</span> Sign Out
+        </button>
+      </div>
+    </aside>
+    <div class="db-main">
+      <header class="db-topbar">
+        <div class="db-topbar-left">
+          <button class="db-hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div class="db-page-title">Team Analytics</div>
+            <div class="db-breadcrumb">Stackly / <span>Manager</span></div>
+          </div>
+        </div>
+        <div class="db-topbar-right">
+          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+        </div>
+      </header>
+      <main class="db-content">
+        <div class="pg-header">
+          <div class="pg-title">Team Analytics ðŸ“Š</div>
+          <div class="pg-sub">
+            Track your team's output, velocity and performance across all active
+            projects.
+          </div>
+        </div>
+
+        <div class="pg-grid-4">
+          <div class="pg-metric">
+            <span class="pg-metric-icon">âœ…</span>
+            <div class="pg-metric-val">84%</div>
+            <div class="pg-metric-label">Sprint Completion</div>
+            <div class="pg-metric-trend trend-up">â†‘ 6% vs last sprint</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸ‘¥</span>
+            <div class="pg-metric-val">12</div>
+            <div class="pg-metric-label">Team Members</div>
+            <div class="pg-metric-trend trend-up">â†‘ 2 new this quarter</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">ðŸ“‹</span>
+            <div class="pg-metric-val">42</div>
+            <div class="pg-metric-label">Tasks Completed (week)</div>
+            <div class="pg-metric-trend trend-up">â†‘ Best this quarter</div>
+          </div>
+          <div class="pg-metric">
+            <span class="pg-metric-icon">âš¡</span>
+            <div class="pg-metric-val">2.8d</div>
+            <div class="pg-metric-label">Avg Task Cycle Time</div>
+            <div class="pg-metric-trend trend-up">â†“ 0.4d faster</div>
+          </div>
+        </div>
+
+        <div class="pg-grid-2">
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title">
+                <span>ðŸ“Š</span> Team Velocity (last 8 sprints)
+              </div>
+            </div>
+            <div class="db-widget-body">
+              <div class="pg-chart-area" id="velChart"></div>
+            </div>
+          </div>
+          <div class="db-widget">
+            <div class="db-widget-header">
+              <div class="db-widget-title"><span>ðŸ©</span> Task Status</div>
+            </div>
+            <div class="db-widget-body">
+              <div class="db-donut-wrap">
+                <svg
+                  class="db-donut"
+                  viewBox="0 0 120 120"
+                  id="taskDonut"
+                ></svg>
+                <div class="db-donut-legend">
+                  <div class="db-legend-item">
+                    <span
+                      class="db-legend-dot"
+                      style="background: #00ffa3"
+                    ></span
+                    >Done<span class="db-legend-val">51%</span>
+                  </div>
+                  <div class="db-legend-item">
+                    <span
+                      class="db-legend-dot"
+                      style="background: #6c63ff"
+                    ></span
+                    >In Progress<span class="db-legend-val">25%</span>
+                  </div>
+                  <div class="db-legend-item">
+                    <span
+                      class="db-legend-dot"
+                      style="background: #00d4ff"
+                    ></span
+                    >Review<span class="db-legend-val">16%</span>
+                  </div>
+                  <div class="db-legend-item">
+                    <span
+                      class="db-legend-dot"
+                      style="background: #ff6b6b"
+                    ></span
+                    >Blocked<span class="db-legend-val">8%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Per-member performance -->
+        <div class="db-widget">
+          <div class="db-widget-header">
+            <div class="db-widget-title">
+              <span>ðŸ‘¥</span> Member Performance (Sprint 14)
+            </div>
+          </div>
+          <div class="db-widget-body" style="padding: 0">
+            <div class="db-table-wrap">
+              <table class="db-table">
+                <thead>
+                  <tr>
+                    <th>Member</th>
+                    <th>Role</th>
+                    <th>Tasks Done</th>
+                    <th>In Progress</th>
+                    <th>Blocked</th>
+                    <th>Velocity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="db-table-avatar">SK</span>Sarah Kim</td>
+                    <td>
+                      <span class="pg-chip" style="font-size: 0.68rem"
+                        >Developer</span
+                      >
+                    </td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>
+                      <span class="pg-chip green" style="font-size: 0.7rem"
+                        >High</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="db-table-avatar">MR</span>Marcus Reed</td>
+                    <td>
+                      <span class="pg-chip" style="font-size: 0.68rem"
+                        >Developer</span
+                      >
+                    </td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>
+                      <span class="pg-chip blue" style="font-size: 0.7rem"
+                        >Medium</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="db-table-avatar">PN</span>Priya Nair</td>
+                    <td>
+                      <span class="pg-chip blue" style="font-size: 0.68rem"
+                        >Analyst</span
+                      >
+                    </td>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <span class="pg-chip green" style="font-size: 0.7rem"
+                        >High</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="db-table-avatar">EM</span>Elena M.</td>
+                    <td>
+                      <span class="pg-chip" style="font-size: 0.68rem"
+                        >Developer</span
+                      >
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>
+                      <span class="pg-chip orange" style="font-size: 0.7rem"
+                        >Low</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+      bootShell(
+        "mgr-analytics.html",
+        "Measure team performance â€” velocity, output and sprint health.",
+      );
+      const vals = [28, 34, 31, 42, 38, 45, 40, 48];
+      const max = Math.max(...vals);
+      const rc = document.getElementById("velChart");
+      vals.forEach((v, i) => {
+        const b = document.createElement("div");
+        b.className =
+          "pg-chart-bar" + (i === 7 ? " green" : i % 2 === 0 ? " accent" : "");
+        b.style.height = (v / max) * 100 + "%";
+        rc.appendChild(b);
+      });
+      const d = [
+        { val: 51, color: "#00ffa3" },
+        { val: 25, color: "#6c63ff" },
+        { val: 16, color: "#00d4ff" },
+        { val: 8, color: "#ff6b6b" },
+      ];
+      const tot = d.reduce((s, x) => s + x.val, 0),
+        R = 40,
+        cx = 60,
+        cy = 60,
+        st = 18,
+        ci = 2 * Math.PI * R;
+      let off = 0,
+        p = "";
+      d.forEach((x) => {
+        const da = (x.val / tot) * ci,
+          ga = ci - da;
+        p += `<circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="${x.color}" stroke-width="${st}" stroke-dasharray="${da} ${ga}" stroke-dashoffset="${-off}" transform="rotate(-90 ${cx} ${cy})"/>`;
+        off += da;
+      });
+      p += `<text x="${cx}" y="${cy + 4}" text-anchor="middle" fill="#fff" font-size="11" font-weight="800">100%</text>`;
+      document.getElementById("taskDonut").innerHTML = p;
+    </script>
+  <script src=../assets/js/404-redirect.js></script>`n </body>
+</html>
+
