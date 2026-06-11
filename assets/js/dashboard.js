@@ -1534,3 +1534,23 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
   sessionStorage.removeItem("stackly_user");
   window.location.href = "login.html";
 });
+
+document.addEventListener("click", (e) => {
+  const target = e.target.closest("a, button");
+  if (!target) return;
+
+  if (target.id === "logoutBtn" || target.closest("#logoutBtn")) return;
+  if (target.id === "hamburgerBtn" || target.closest("#hamburgerBtn")) return;
+
+  if (target.tagName === "A") {
+    const href = target.getAttribute("href");
+    if (!href || href === "#" || href === "javascript:void(0)") {
+      e.preventDefault();
+      window.location.href = "../404.html";
+    }
+  } else if (target.tagName === "BUTTON") {
+    if (!target.hasAttribute("onclick")) {
+      window.location.href = "../404.html";
+    }
+  }
+});

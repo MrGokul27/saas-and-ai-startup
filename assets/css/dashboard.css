@@ -1904,8 +1904,6 @@
   flex-direction: column;
   gap: 10px;
 }
-.pg-funnel-step {
-}
 .pg-funnel-label {
   display: flex;
   justify-content: space-between;
