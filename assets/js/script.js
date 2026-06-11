@@ -294,12 +294,12 @@ async function loadCommonHTML(selector, url) {
     setTimeout(() => loader.classList.add("loader-hidden"), 380);
   };
 
-  const maxTimer = setTimeout(dismiss, 2000);
+  const maxTimer = setTimeout(dismiss, 1500);
   window.addEventListener(
     "load",
     () => {
       clearTimeout(maxTimer);
-      setTimeout(dismiss, 2000);
+      setTimeout(dismiss, 1500);
     },
     { once: true },
   );

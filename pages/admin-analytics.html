@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Analytics â€” Stackly Admin</title>
+    <title>Analytics - Stackly Admin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/dashboard.css" />
     <style>
-      /* â”€â”€ Analytics page scoped fixes â”€â”€ */
+      /* ── Analytics page scoped fixes ── */
 
       /* Revenue chart widget header: title + year tabs wrap on narrow widths */
       .an-chart-header {
@@ -85,12 +85,16 @@
         min-width: 520px;
       }
 
-      /* â”€â”€ Responsive â”€â”€ */
+      /* ── Responsive ── */
       @media (max-width: 640px) {
-        .an-rev-val { font-size: 1.4rem; }
+        .an-rev-val {
+          font-size: 1.4rem;
+        }
 
         /* hide every other month label */
-        .an-month-labels span:nth-child(even) { display: none; }
+        .an-month-labels span:nth-child(even) {
+          display: none;
+        }
 
         /* donut stacks vertically */
         .db-donut-wrap {
@@ -106,9 +110,13 @@
       }
 
       @media (max-width: 400px) {
-        .an-rev-val { font-size: 1.2rem; }
+        .an-rev-val {
+          font-size: 1.2rem;
+        }
         /* hide 3 out of every 4 month labels */
-        .an-month-labels span:not(:nth-child(3n+1)) { display: none; }
+        .an-month-labels span:not(:nth-child(3n + 1)) {
+          display: none;
+        }
       }
     </style>
   </head>
@@ -121,16 +129,16 @@
         /></a>
       </div>
       <div class="db-sidebar-user">
-        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div class="db-user-avatar" id="sidebarAvatar">👤</div>
         <div style="min-width: 0">
-          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
-          <div class="db-user-role" id="sidebarRole">â€”</div>
+          <div class="db-user-name" id="sidebarName">Loading...</div>
+          <div class="db-user-role" id="sidebarRole">Member</div>
         </div>
       </div>
       <nav class="db-nav" id="dbNav"></nav>
       <div class="db-sidebar-bottom">
         <button class="db-logout-btn" id="logoutBtn">
-          <span style="font-size: 16px">ðŸšª</span> Sign Out
+          <span style="font-size: 16px">🚪</span> Sign Out
         </button>
       </div>
     </aside>
@@ -150,31 +158,47 @@
         </div>
         <div class="db-topbar-right">
           <div class="db-search">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
-            Searchâ€¦
+            Search…
           </div>
           <button class="db-icon-btn" title="Notifications">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" />
               <path d="M13.73 21a2 2 0 01-3.46 0" />
             </svg>
             <span class="notif-badge"></span>
           </button>
-          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+          <div class="db-topbar-avatar" id="topbarAvatar">👤</div>
         </div>
       </header>
 
       <main class="db-content">
-
         <!-- Welcome -->
         <div class="db-welcome">
           <div>
-            <div class="db-welcome-title" id="welcomeTitle">Analytics Overview ðŸ“Š</div>
+            <div class="db-welcome-title" id="welcomeTitle">
+              Analytics Overview 📊
+            </div>
             <div class="db-welcome-sub">
-              Full-platform performance metrics â€” revenue, users, AI ops & growth trends.
+              Full-platform performance metrics — revenue, users, AI ops &
+              growth trends.
             </div>
           </div>
           <div class="db-welcome-time">
@@ -186,38 +210,39 @@
         <!-- KPI Row -->
         <div class="pg-grid-4">
           <div class="pg-metric">
-            <span class="pg-metric-icon">ðŸ’°</span>
+            <span class="pg-metric-icon">💰</span>
             <div class="pg-metric-val">$284K</div>
             <div class="pg-metric-label">Total Revenue (MTD)</div>
-            <div class="pg-metric-trend trend-up">â†‘ 18.2% vs last month</div>
+            <div class="pg-metric-trend trend-up">↑ 18.2% vs last month</div>
           </div>
           <div class="pg-metric">
-            <span class="pg-metric-icon">ðŸ‘¥</span>
+            <span class="pg-metric-icon">👥</span>
             <div class="pg-metric-val">12,840</div>
             <div class="pg-metric-label">Active Users</div>
-            <div class="pg-metric-trend trend-up">â†‘ 128 new this week</div>
+            <div class="pg-metric-trend trend-up">↑ 128 new this week</div>
           </div>
           <div class="pg-metric">
-            <span class="pg-metric-icon">ðŸ¤–</span>
+            <span class="pg-metric-icon">🤖</span>
             <div class="pg-metric-val">1.4M</div>
             <div class="pg-metric-label">AI Operations / Day</div>
-            <div class="pg-metric-trend trend-up">â†‘ 31% WoW</div>
+            <div class="pg-metric-trend trend-up">↑ 31% WoW</div>
           </div>
           <div class="pg-metric">
-            <span class="pg-metric-icon">ðŸŒ</span>
+            <span class="pg-metric-icon">🌐</span>
             <div class="pg-metric-val">99.98%</div>
             <div class="pg-metric-label">Platform Uptime</div>
-            <div class="pg-metric-trend trend-up">â†‘ SLA exceeded</div>
+            <div class="pg-metric-trend trend-up">↑ SLA exceeded</div>
           </div>
         </div>
 
         <!-- Charts Row -->
         <div class="pg-grid-main-side">
-
           <!-- Revenue by Month -->
           <div class="db-widget">
             <div class="an-chart-header">
-              <div class="db-widget-title"><span>ðŸ“ˆ</span> Revenue by Month</div>
+              <div class="db-widget-title">
+                <span>📈</span> Revenue by Month
+              </div>
               <div class="an-year-tabs">
                 <button class="pg-tab active">2024</button>
                 <button class="pg-tab">2023</button>
@@ -226,7 +251,16 @@
             <div class="db-widget-body">
               <div class="an-rev-headline">
                 <span class="an-rev-val">$284K</span>
-                <span class="trend-up" style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:100px;">â†‘ 18.2%</span>
+                <span
+                  class="trend-up"
+                  style="
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    padding: 2px 8px;
+                    border-radius: 100px;
+                  "
+                  >↑ 18.2%</span
+                >
               </div>
               <div class="pg-chart-area" id="revenueChart"></div>
               <div class="an-month-labels">
@@ -240,7 +274,7 @@
           <!-- Revenue Split Donut -->
           <div class="db-widget">
             <div class="db-widget-header">
-              <div class="db-widget-title"><span>ðŸ©</span> Revenue Split</div>
+              <div class="db-widget-title"><span>🍩</span> Revenue Split</div>
               <button class="db-widget-action">Export</button>
             </div>
             <div class="db-widget-body">
@@ -248,19 +282,31 @@
                 <svg class="db-donut" viewBox="0 0 120 120" id="revDonut"></svg>
                 <div class="db-donut-legend">
                   <div class="db-legend-item">
-                    <span class="db-legend-dot" style="background:#6c63ff"></span>
+                    <span
+                      class="db-legend-dot"
+                      style="background: #6c63ff"
+                    ></span>
                     SaaS Plans<span class="db-legend-val">42%</span>
                   </div>
                   <div class="db-legend-item">
-                    <span class="db-legend-dot" style="background:#00d4ff"></span>
+                    <span
+                      class="db-legend-dot"
+                      style="background: #00d4ff"
+                    ></span>
                     Enterprise<span class="db-legend-val">31%</span>
                   </div>
                   <div class="db-legend-item">
-                    <span class="db-legend-dot" style="background:#00ffa3"></span>
+                    <span
+                      class="db-legend-dot"
+                      style="background: #00ffa3"
+                    ></span>
                     Starter<span class="db-legend-val">18%</span>
                   </div>
                   <div class="db-legend-item">
-                    <span class="db-legend-dot" style="background:#ff6b6b"></span>
+                    <span
+                      class="db-legend-dot"
+                      style="background: #ff6b6b"
+                    ></span>
                     Add-ons<span class="db-legend-val">9%</span>
                   </div>
                 </div>
@@ -271,12 +317,13 @@
 
         <!-- User Growth + AI Ops -->
         <div class="pg-grid-2">
-
           <!-- User Growth Funnel -->
           <div class="db-widget">
             <div class="db-widget-header">
-              <div class="db-widget-title"><span>ðŸ‘¥</span> User Growth</div>
-              <span style="font-size:0.75rem;color:var(--clr-muted)">Last 12 months</span>
+              <div class="db-widget-title"><span>👥</span> User Growth</div>
+              <span style="font-size: 0.75rem; color: var(--clr-muted)"
+                >Last 12 months</span
+              >
             </div>
             <div class="db-widget-body">
               <div class="pg-funnel">
@@ -285,7 +332,7 @@
                     <span>Signups</span><span>3,420 / month</span>
                   </div>
                   <div class="pg-funnel-track">
-                    <div class="pg-funnel-fill" style="width:100%">100%</div>
+                    <div class="pg-funnel-fill" style="width: 100%">100%</div>
                   </div>
                 </div>
                 <div class="pg-funnel-step">
@@ -293,7 +340,15 @@
                     <span>Activated</span><span>2,736</span>
                   </div>
                   <div class="pg-funnel-track">
-                    <div class="pg-funnel-fill" style="width:80%;background:linear-gradient(90deg,#00d4ff,#6c63ff)">80%</div>
+                    <div
+                      class="pg-funnel-fill"
+                      style="
+                        width: 80%;
+                        background: linear-gradient(90deg, #00d4ff, #6c63ff);
+                      "
+                    >
+                      80%
+                    </div>
                   </div>
                 </div>
                 <div class="pg-funnel-step">
@@ -301,7 +356,15 @@
                     <span>Converted to Paid</span><span>1,232</span>
                   </div>
                   <div class="pg-funnel-track">
-                    <div class="pg-funnel-fill" style="width:36%;background:linear-gradient(90deg,#00ffa3,#00d4ff)">36%</div>
+                    <div
+                      class="pg-funnel-fill"
+                      style="
+                        width: 36%;
+                        background: linear-gradient(90deg, #00ffa3, #00d4ff);
+                      "
+                    >
+                      36%
+                    </div>
                   </div>
                 </div>
                 <div class="pg-funnel-step">
@@ -309,7 +372,15 @@
                     <span>Retained 90d</span><span>1,048</span>
                   </div>
                   <div class="pg-funnel-track">
-                    <div class="pg-funnel-fill" style="width:31%;background:linear-gradient(90deg,#ffaa6b,#ff6b6b)">31%</div>
+                    <div
+                      class="pg-funnel-fill"
+                      style="
+                        width: 31%;
+                        background: linear-gradient(90deg, #ffaa6b, #ff6b6b);
+                      "
+                    >
+                      31%
+                    </div>
                   </div>
                 </div>
               </div>
@@ -319,40 +390,62 @@
           <!-- AI Operations Breakdown -->
           <div class="db-widget">
             <div class="db-widget-header">
-              <div class="db-widget-title"><span>ðŸ¤–</span> AI Operations Breakdown</div>
+              <div class="db-widget-title">
+                <span>🤖</span> AI Operations Breakdown
+              </div>
               <button class="db-widget-action">Details</button>
             </div>
-            <div class="db-widget-body" style="padding-top:12px">
+            <div class="db-widget-body" style="padding-top: 12px">
               <div class="db-agent-list">
                 <div class="db-agent-item">
-                  <div class="db-agent-icon" style="background:rgba(108,99,255,0.15)">ðŸ§ </div>
+                  <div
+                    class="db-agent-icon"
+                    style="background: rgba(108, 99, 255, 0.15)"
+                  >
+                    🧠
+                  </div>
                   <div>
                     <div class="db-agent-name">NLP Processing</div>
-                    <div class="db-agent-task">620K ops/day â€” 44% of total</div>
+                    <div class="db-agent-task">620K ops/day — 44% of total</div>
                   </div>
                   <span class="db-agent-status status-running">running</span>
                 </div>
                 <div class="db-agent-item">
-                  <div class="db-agent-icon" style="background:rgba(0,212,255,0.12)">ðŸ“Š</div>
+                  <div
+                    class="db-agent-icon"
+                    style="background: rgba(0, 212, 255, 0.12)"
+                  >
+                    📊
+                  </div>
                   <div>
                     <div class="db-agent-name">Data Analysis</div>
-                    <div class="db-agent-task">380K ops/day â€” 27%</div>
+                    <div class="db-agent-task">380K ops/day — 27%</div>
                   </div>
                   <span class="db-agent-status status-running">running</span>
                 </div>
                 <div class="db-agent-item">
-                  <div class="db-agent-icon" style="background:rgba(0,255,163,0.12)">ðŸ”’</div>
+                  <div
+                    class="db-agent-icon"
+                    style="background: rgba(0, 255, 163, 0.12)"
+                  >
+                    🔒
+                  </div>
                   <div>
                     <div class="db-agent-name">Threat Detection</div>
-                    <div class="db-agent-task">280K ops/day â€” 20%</div>
+                    <div class="db-agent-task">280K ops/day — 20%</div>
                   </div>
                   <span class="db-agent-status status-running">running</span>
                 </div>
                 <div class="db-agent-item">
-                  <div class="db-agent-icon" style="background:rgba(255,170,107,0.12)">ðŸ“§</div>
+                  <div
+                    class="db-agent-icon"
+                    style="background: rgba(255, 170, 107, 0.12)"
+                  >
+                    📧
+                  </div>
                   <div>
                     <div class="db-agent-name">Smart Routing</div>
-                    <div class="db-agent-task">120K ops/day â€” 9%</div>
+                    <div class="db-agent-task">120K ops/day — 9%</div>
                   </div>
                   <span class="db-agent-status status-idle">idle</span>
                 </div>
@@ -364,10 +457,12 @@
         <!-- Top Customers -->
         <div class="db-widget">
           <div class="db-widget-header">
-            <div class="db-widget-title"><span>ðŸ†</span> Top Customers by Revenue</div>
+            <div class="db-widget-title">
+              <span>🏆</span> Top Customers by Revenue
+            </div>
             <button class="db-widget-action">View All</button>
           </div>
-          <div class="db-widget-body" style="padding:0">
+          <div class="db-widget-body" style="padding: 0">
             <div class="db-table-wrap">
               <table class="db-table">
                 <thead>
@@ -387,7 +482,9 @@
                     <td>$12,400</td>
                     <td>340</td>
                     <td>240K/day</td>
-                    <td><span class="db-status-pill pill-active">active</span></td>
+                    <td>
+                      <span class="db-status-pill pill-active">active</span>
+                    </td>
                   </tr>
                   <tr>
                     <td><span class="db-table-avatar">AC</span>Axiom Corp</td>
@@ -395,7 +492,9 @@
                     <td>$9,800</td>
                     <td>220</td>
                     <td>180K/day</td>
-                    <td><span class="db-status-pill pill-active">active</span></td>
+                    <td>
+                      <span class="db-status-pill pill-active">active</span>
+                    </td>
                   </tr>
                   <tr>
                     <td><span class="db-table-avatar">NX</span>Nexaflow</td>
@@ -403,7 +502,9 @@
                     <td>$4,200</td>
                     <td>85</td>
                     <td>62K/day</td>
-                    <td><span class="db-status-pill pill-active">active</span></td>
+                    <td>
+                      <span class="db-status-pill pill-active">active</span>
+                    </td>
                   </tr>
                   <tr>
                     <td><span class="db-table-avatar">DS</span>DataSphere</td>
@@ -411,7 +512,9 @@
                     <td>$3,600</td>
                     <td>64</td>
                     <td>48K/day</td>
-                    <td><span class="db-status-pill pill-pending">pending</span></td>
+                    <td>
+                      <span class="db-status-pill pill-pending">pending</span>
+                    </td>
                   </tr>
                   <tr>
                     <td><span class="db-table-avatar">CV</span>CloudVault</td>
@@ -419,14 +522,15 @@
                     <td>$1,200</td>
                     <td>28</td>
                     <td>14K/day</td>
-                    <td><span class="db-status-pill pill-active">active</span></td>
+                    <td>
+                      <span class="db-status-pill pill-active">active</span>
+                    </td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
         </div>
-
       </main>
     </div>
 
@@ -435,7 +539,7 @@
     <script>
       bootShell(
         "admin-analytics.html",
-        "Full-platform analytics â€” track every metric that matters.",
+        "Full-platform analytics — track every metric that matters.",
       );
 
       // Revenue chart bars
@@ -454,20 +558,24 @@
         { val: 42, color: "#6c63ff" },
         { val: 31, color: "#00d4ff" },
         { val: 18, color: "#00ffa3" },
-        { val:  9, color: "#ff6b6b" },
+        { val: 9, color: "#ff6b6b" },
       ];
       const total = donutData.reduce((s, d) => s + d.val, 0);
-      const R = 40, cx = 60, cy = 60, stroke = 18;
+      const R = 40,
+        cx = 60,
+        cy = 60,
+        stroke = 18;
       const circ = 2 * Math.PI * R;
-      let offset = 0, paths = "";
+      let offset = 0,
+        paths = "";
       donutData.forEach((d) => {
-        const dash = (d.val / total) * circ, gap = circ - dash;
+        const dash = (d.val / total) * circ,
+          gap = circ - dash;
         paths += `<circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="${d.color}" stroke-width="${stroke}" stroke-dasharray="${dash} ${gap}" stroke-dashoffset="${-offset}" transform="rotate(-90 ${cx} ${cy})"/>`;
         offset += dash;
       });
       paths += `<text x="${cx}" y="${cy + 4}" text-anchor="middle" fill="#fff" font-size="11" font-weight="800">100%</text>`;
       document.getElementById("revDonut").innerHTML = paths;
     </script>
-  <script src=../assets/js/404-redirect.js></script>`n </body>
+  </body>
 </html>
-

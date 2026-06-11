@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>API Usage â€” Stackly Developer</title>
+    <title>API Usage - Stackly Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -25,16 +25,16 @@
         /></a>
       </div>
       <div class="db-sidebar-user">
-        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div class="db-user-avatar" id="sidebarAvatar">👤</div>
         <div style="min-width: 0">
-          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
-          <div class="db-user-role" id="sidebarRole">â€”</div>
+          <div class="db-user-name" id="sidebarName">Loading...</div>
+          <div class="db-user-role" id="sidebarRole">Member</div>
         </div>
       </div>
       <nav class="db-nav" id="dbNav"></nav>
       <div class="db-sidebar-bottom">
         <button class="db-logout-btn" id="logoutBtn">
-          <span style="font-size: 16px">ðŸšª</span> Sign Out
+          <span style="font-size: 16px">🚪</span> Sign Out
         </button>
       </div>
     </aside>
@@ -62,45 +62,45 @@
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
-            Search endpointsâ€¦
+            Search endpoints…
           </div>
-          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+          <div class="db-topbar-avatar" id="topbarAvatar">👤</div>
         </div>
       </header>
       <main class="db-content">
         <div class="pg-header">
-          <div class="pg-title">API Usage ðŸ“¡</div>
+          <div class="pg-title">API Usage 📊</div>
           <div class="pg-sub">
             Monitor request volume, latency, error rates and quota consumption
             across all endpoints.
           </div>
           <div class="pg-actions">
-            <button class="btn-db-primary">ðŸ“¤ Export Report</button
-            ><button class="btn-db-ghost">ðŸ”‘ Manage Keys</button>
+            <button class="btn-db-primary">📤 Export Report</button
+            ><button class="btn-db-ghost">🔑 Manage Keys</button>
           </div>
         </div>
 
         <div class="pg-grid-4">
           <div class="pg-metric">
-            <span class="pg-metric-icon">ðŸ“¡</span>
+            <span class="pg-metric-icon">📊</span>
             <div class="pg-metric-val">4.2M</div>
             <div class="pg-metric-label">Requests Today</div>
-            <div class="pg-metric-trend trend-up">â†‘ 22% vs yesterday</div>
+            <div class="pg-metric-trend trend-up">↑ 22% vs yesterday</div>
           </div>
           <div class="pg-metric">
-            <span class="pg-metric-icon">âš¡</span>
+            <span class="pg-metric-icon">⏱</span>
             <div class="pg-metric-val">38ms</div>
             <div class="pg-metric-label">P95 Latency</div>
-            <div class="pg-metric-trend trend-up">â†“ 12ms faster</div>
+            <div class="pg-metric-trend trend-up">↑ 12ms faster</div>
           </div>
           <div class="pg-metric">
-            <span class="pg-metric-icon">ðŸ›</span>
+            <span class="pg-metric-icon">🐛</span>
             <div class="pg-metric-val">0.04%</div>
             <div class="pg-metric-label">Error Rate</div>
             <div class="pg-metric-trend trend-up">Below 0.1% target</div>
           </div>
           <div class="pg-metric">
-            <span class="pg-metric-icon">ðŸ“Š</span>
+            <span class="pg-metric-icon">🔋</span>
             <div class="pg-metric-val">42%</div>
             <div class="pg-metric-label">Quota Used</div>
             <div class="pg-metric-trend trend-neutral">10M / 25M monthly</div>
@@ -111,7 +111,7 @@
           <div class="db-widget">
             <div class="db-widget-header">
               <div class="db-widget-title">
-                <span>ðŸ“ˆ</span> Requests per Hour
+                <span>📊</span> Requests per Hour
               </div>
               <button class="db-widget-action">Export</button>
             </div>
@@ -140,7 +140,7 @@
                     padding: 2px 8px;
                     border-radius: 100px;
                   "
-                  >â†‘ 22%</span
+                  >↑ 22%</span
                 >
               </div>
               <div class="pg-chart-area" id="apiChart"></div>
@@ -214,7 +214,7 @@
           </div>
           <div class="db-widget">
             <div class="db-widget-header">
-              <div class="db-widget-title"><span>ðŸ”¥</span> Top Endpoints</div>
+              <div class="db-widget-title"><span>🔗</span> Top Endpoints</div>
             </div>
             <div class="db-widget-body" style="padding-top: 8px">
               <div class="pg-timeline">
@@ -222,36 +222,28 @@
                   <div class="pg-tl-dot" style="background: #6c63ff"></div>
                   <div class="pg-tl-body">
                     <div class="pg-tl-title">POST /api/v2/ai/process</div>
-                    <div class="pg-tl-desc">
-                      1.2M calls Â· 42ms avg Â· 0.01% err
-                    </div>
+                    <div class="pg-tl-desc">1.2M calls 42ms avg 0.01% err</div>
                   </div>
                 </div>
                 <div class="pg-tl-item">
                   <div class="pg-tl-dot" style="background: #00d4ff"></div>
                   <div class="pg-tl-body">
                     <div class="pg-tl-title">GET /api/v2/analytics/events</div>
-                    <div class="pg-tl-desc">
-                      840K calls Â· 28ms avg Â· 0.00% err
-                    </div>
+                    <div class="pg-tl-desc">840K calls 28ms avg 0.00% err</div>
                   </div>
                 </div>
                 <div class="pg-tl-item">
                   <div class="pg-tl-dot" style="background: #00ffa3"></div>
                   <div class="pg-tl-body">
                     <div class="pg-tl-title">POST /api/v2/users/auth</div>
-                    <div class="pg-tl-desc">
-                      620K calls Â· 55ms avg Â· 0.08% err
-                    </div>
+                    <div class="pg-tl-desc">620K calls 55ms avg 0.08% err</div>
                   </div>
                 </div>
                 <div class="pg-tl-item">
                   <div class="pg-tl-dot" style="background: #ffaa6b"></div>
                   <div class="pg-tl-body">
                     <div class="pg-tl-title">GET /api/v2/reports/generate</div>
-                    <div class="pg-tl-desc">
-                      380K calls Â· 210ms avg Â· 0.02% err
-                    </div>
+                    <div class="pg-tl-desc">380K calls 210ms avg 0.02% err</div>
                   </div>
                 </div>
               </div>
@@ -261,7 +253,7 @@
 
         <div class="db-widget">
           <div class="db-widget-header">
-            <div class="db-widget-title"><span>ðŸ—‚ï¸</span> Request Log</div>
+            <div class="db-widget-title"><span>📋</span> Request Log</div>
             <button class="db-widget-action">View All</button>
           </div>
           <div class="db-widget-body" style="padding: 0">
@@ -290,7 +282,7 @@
                     <td>/api/v2/ai/process</td>
                     <td><span class="db-status-pill pill-active">200</span></td>
                     <td>38ms</td>
-                    <td>sk_live_â€¢â€¢xxf4</td>
+                    <td>sk_live_??????xxf4</td>
                   </tr>
                   <tr>
                     <td style="font-family: monospace; font-size: 0.78rem">
@@ -304,7 +296,7 @@
                     <td>/api/v2/analytics/events</td>
                     <td><span class="db-status-pill pill-active">200</span></td>
                     <td>22ms</td>
-                    <td>sk_live_â€¢â€¢xxf4</td>
+                    <td>sk_live_??????xxf4</td>
                   </tr>
                   <tr>
                     <td style="font-family: monospace; font-size: 0.78rem">
@@ -318,7 +310,7 @@
                     <td>/api/v2/users/auth</td>
                     <td><span class="db-status-pill pill-danger">401</span></td>
                     <td>12ms</td>
-                    <td>sk_test_â€¢â€¢aa21</td>
+                    <td>sk_test_??????aa21</td>
                   </tr>
                   <tr>
                     <td style="font-family: monospace; font-size: 0.78rem">
@@ -332,7 +324,7 @@
                     <td>/api/v2/reports/generate</td>
                     <td><span class="db-status-pill pill-active">200</span></td>
                     <td>214ms</td>
-                    <td>sk_live_â€¢â€¢xxf4</td>
+                    <td>sk_live_??????xxf4</td>
                   </tr>
                 </tbody>
               </table>
@@ -346,7 +338,7 @@
     <script>
       bootShell(
         "dev-api-usage.html",
-        "Monitor your API health â€” requests, latency and error rates in real time.",
+        "Monitor your API health — requests, latency and error rates in real time.",
       );
       const vals = [62, 75, 58, 88, 95, 72, 84, 91, 78, 100, 82, 68];
       const max = Math.max(...vals);
@@ -360,6 +352,5 @@
         rc.appendChild(b);
       });
     </script>
-  <script src=../assets/js/404-redirect.js></script>`n </body>
+  </body>
 </html>
-

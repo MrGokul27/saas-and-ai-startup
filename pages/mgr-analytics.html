@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team Analytics â€” Stackly Manager</title>
+    <title>Team Analytics - Stackly Manager</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -25,16 +25,16 @@
         /></a>
       </div>
       <div class="db-sidebar-user">
-        <div class="db-user-avatar" id="sidebarAvatar">â€”</div>
+        <div class="db-user-avatar" id="sidebarAvatar">👤</div>
         <div style="min-width: 0">
-          <div class="db-user-name" id="sidebarName">Loadingâ€¦</div>
-          <div class="db-user-role" id="sidebarRole">â€”</div>
+          <div class="db-user-name" id="sidebarName">Loading...</div>
+          <div class="db-user-role" id="sidebarRole">Member</div>
         </div>
       </div>
       <nav class="db-nav" id="dbNav"></nav>
       <div class="db-sidebar-bottom">
         <button class="db-logout-btn" id="logoutBtn">
-          <span style="font-size: 16px">ðŸšª</span> Sign Out
+          <span style="font-size: 16px">🚪</span> Sign Out
         </button>
       </div>
     </aside>
@@ -50,12 +50,12 @@
           </div>
         </div>
         <div class="db-topbar-right">
-          <div class="db-topbar-avatar" id="topbarAvatar">â€”</div>
+          <div class="db-topbar-avatar" id="topbarAvatar">👤</div>
         </div>
       </header>
       <main class="db-content">
         <div class="pg-header">
-          <div class="pg-title">Team Analytics ðŸ“Š</div>
+          <div class="pg-title">Team Analytics 📊</div>
           <div class="pg-sub">
             Track your team's output, velocity and performance across all active
             projects.
@@ -64,28 +64,28 @@
 
         <div class="pg-grid-4">
           <div class="pg-metric">
-            <span class="pg-metric-icon">âœ…</span>
+            <span class="pg-metric-icon">🏃</span>
             <div class="pg-metric-val">84%</div>
             <div class="pg-metric-label">Sprint Completion</div>
-            <div class="pg-metric-trend trend-up">â†‘ 6% vs last sprint</div>
+            <div class="pg-metric-trend trend-up">↑ 6% vs last sprint</div>
           </div>
           <div class="pg-metric">
-            <span class="pg-metric-icon">ðŸ‘¥</span>
+            <span class="pg-metric-icon">👥</span>
             <div class="pg-metric-val">12</div>
             <div class="pg-metric-label">Team Members</div>
-            <div class="pg-metric-trend trend-up">â†‘ 2 new this quarter</div>
+            <div class="pg-metric-trend trend-up">↑ 2 new this quarter</div>
           </div>
           <div class="pg-metric">
-            <span class="pg-metric-icon">ðŸ“‹</span>
+            <span class="pg-metric-icon">🏆</span>
             <div class="pg-metric-val">42</div>
             <div class="pg-metric-label">Tasks Completed (week)</div>
-            <div class="pg-metric-trend trend-up">â†‘ Best this quarter</div>
+            <div class="pg-metric-trend trend-up">↑ Best this quarter</div>
           </div>
           <div class="pg-metric">
-            <span class="pg-metric-icon">âš¡</span>
+            <span class="pg-metric-icon">⏱</span>
             <div class="pg-metric-val">2.8d</div>
             <div class="pg-metric-label">Avg Task Cycle Time</div>
-            <div class="pg-metric-trend trend-up">â†“ 0.4d faster</div>
+            <div class="pg-metric-trend trend-up">↑ 0.4d faster</div>
           </div>
         </div>
 
@@ -93,7 +93,7 @@
           <div class="db-widget">
             <div class="db-widget-header">
               <div class="db-widget-title">
-                <span>ðŸ“Š</span> Team Velocity (last 8 sprints)
+                <span>📈</span> Team Velocity (last 8 sprints)
               </div>
             </div>
             <div class="db-widget-body">
@@ -102,7 +102,7 @@
           </div>
           <div class="db-widget">
             <div class="db-widget-header">
-              <div class="db-widget-title"><span>ðŸ©</span> Task Status</div>
+              <div class="db-widget-title"><span>📋</span> Task Status</div>
             </div>
             <div class="db-widget-body">
               <div class="db-donut-wrap">
@@ -150,7 +150,7 @@
         <div class="db-widget">
           <div class="db-widget-header">
             <div class="db-widget-title">
-              <span>ðŸ‘¥</span> Member Performance (Sprint 14)
+              <span>👥</span> Member Performance (Sprint 14)
             </div>
           </div>
           <div class="db-widget-body" style="padding: 0">
@@ -243,7 +243,7 @@
     <script>
       bootShell(
         "mgr-analytics.html",
-        "Measure team performance â€” velocity, output and sprint health.",
+        "Measure team performance — velocity, output and sprint health.",
       );
       const vals = [28, 34, 31, 42, 38, 45, 40, 48];
       const max = Math.max(...vals);
@@ -278,6 +278,5 @@
       p += `<text x="${cx}" y="${cy + 4}" text-anchor="middle" fill="#fff" font-size="11" font-weight="800">100%</text>`;
       document.getElementById("taskDonut").innerHTML = p;
     </script>
-  <script src=../assets/js/404-redirect.js></script>`n </body>
+  </body>
 </html>
-

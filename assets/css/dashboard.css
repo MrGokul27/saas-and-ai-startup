@@ -1,6 +1,4 @@
-/* =============================================
-   DASHBOARD LAYOUT
-   ============================================= */
+/* DASHBOARD LAYOUT */
 .dash-page {
   min-height: 100vh;
   background: var(--clr-bg);
@@ -1971,7 +1969,9 @@
   max-width: 100%;
   width: auto;
 }
-.pg-tabs::-webkit-scrollbar { display: none; }
+.pg-tabs::-webkit-scrollbar {
+  display: none;
+}
 
 /* Widget header: allow wrapping with gap on small screens */
 .db-widget-header {
