@@ -509,6 +509,12 @@
   color: var(--clr-white);
 }
 
+.auth-bottom-note {
+  font-size: 0.76rem;
+  color: rgba(120, 120, 160, 0.7);
+  text-align: center;
+}
+
 /* Password strength */
 .pw-strength-bar {
   height: 3px;

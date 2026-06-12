@@ -242,6 +242,45 @@ function populateUserUI() {
   if (ta) ta.title = `${name} (${role})`;
 }
 
+/* ---- Placeholder Redirection ---- */
+function _initPlaceholderRedirects() {
+  document.addEventListener("click", (e) => {
+    const target = e.target.closest("a, button");
+    if (!target) return;
+
+    // Skip functional dashboard elements
+    if (target.id === "logoutBtn" || target.closest("#logoutBtn")) return;
+    if (target.id === "hamburgerBtn" || target.closest("#hamburgerBtn")) return;
+
+    const isLink = target.tagName === "A";
+    const isButton = target.tagName === "BUTTON";
+
+    if (isLink) {
+      const href = target.getAttribute("href");
+      const isPlaceholder =
+        !href || href === "#" || href.startsWith("javascript:");
+      if (isPlaceholder) {
+        e.preventDefault();
+        _redirectTo404();
+      }
+    } else if (isButton) {
+      // Redirect buttons that don't have an inline onclick (placeholder check)
+      if (!target.hasAttribute("onclick")) {
+        _redirectTo404();
+      }
+    }
+  });
+}
+
+function _redirectTo404() {
+  const parts = window.location.pathname.split("/").filter(Boolean);
+  const pagesIdx = parts.findIndex((p) => p === "pages");
+  const depth = pagesIdx !== -1 ? Math.max(0, parts.length - 1 - pagesIdx) : 0;
+  const prefix = "../".repeat(depth);
+
+  window.location.href = prefix + "404.html";
+}
+
 /* ---- Live clock ---- */
 function startClock() {
   function tick() {
@@ -306,4 +345,5 @@ function bootShell(activeHref, welcomeSub) {
   initMobileToggle();
   initLogout();
   setWelcome(welcomeSub);
+  _initPlaceholderRedirects();
 }
