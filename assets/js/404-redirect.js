@@ -3,7 +3,7 @@
     const parts = window.location.pathname.split("/").filter(Boolean);
     const pagesIdx = parts.findIndex((p) => p === "pages");
     if (pagesIdx !== -1) {
-      const depth = parts.length - pagesIdx;
+      const depth = Math.max(0, parts.length - 1 - pagesIdx);
       return "../".repeat(depth) + "404.html";
     }
     return "404.html";
