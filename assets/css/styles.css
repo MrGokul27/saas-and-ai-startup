@@ -1313,19 +1313,30 @@ section {
   margin: 0 auto 20px;
   position: relative;
   transition: var(--transition);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4); /* Added text shadow */
+  overflow: hidden; /* Ensure glow doesn't overflow */
 }
 .step-item:hover .step-num {
   background: var(--gradient-primary);
   border-color: transparent;
   box-shadow: 0 0 30px rgba(108, 99, 255, 0.5);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.8); /* Enhanced text shadow on hover */
 }
 .step-num .step-glow {
   position: absolute;
   inset: -4px;
   border-radius: 50%;
   background: var(--gradient-primary);
-  opacity: 0.2;
+  opacity: 0; /* Start with 0 opacity */
   z-index: -1;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease; /* Added transition */
+  transform: scale(0.8); /* Start smaller */
+}
+.step-item:hover .step-num .step-glow {
+  opacity: 0.3; /* Make glow more visible on hover */
+  transform: scale(1); /* Expand to full size */
 }
 .step-item h3 {
   font-size: 1rem;
