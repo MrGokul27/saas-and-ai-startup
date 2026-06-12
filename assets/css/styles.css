@@ -1778,7 +1778,7 @@ section {
 .footer-menu a:hover {
   color: var(--clr-white);
 }
-.footer-socials a {
+.f-soc-links a {
   width: 36px;
   height: 36px;
   border-radius: var(--radius-sm);
@@ -1791,7 +1791,7 @@ section {
   transition: var(--transition);
   text-decoration: none;
 }
-.footer-socials a:hover {
+.f-soc-links a:hover {
   color: var(--clr-white);
   background: rgba(108, 99, 255, 0.15);
   border-color: rgba(108, 99, 255, 0.3);

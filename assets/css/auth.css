@@ -52,7 +52,7 @@
     transparent 100%
   );
   border-right: 1px solid var(--clr-border);
-  padding: 48px 56px;
+  padding: 30px 56px;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -191,7 +191,7 @@
 
 /* ---- RIGHT PANEL ---- */
 .auth-right {
-  padding: 48px 56px;
+  /* padding: 48px 56px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -507,14 +507,6 @@
 
 .auth-link:hover {
   color: var(--clr-white);
-}
-
-/* Bottom note */
-.auth-bottom-note {
-  font-size: 0.76rem;
-  color: rgba(120, 120, 160, 0.7);
-  text-align: center;
-  max-width: 380px;
 }
 
 /* Password strength */
