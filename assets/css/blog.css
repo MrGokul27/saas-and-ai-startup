@@ -1,4 +1,10 @@
 /* Custom styles for blog page */
+.page-banner.blog-banner {
+  background-image:
+    linear-gradient(to bottom, rgba(5, 5, 15, 0.7), var(--clr-bg)),
+    url("../images/blog-banner-image.webp");
+}
+
 .blog-card {
   background: var(--clr-bg-card);
   border: 1px solid var(--clr-border);

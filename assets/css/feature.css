@@ -9,8 +9,7 @@
   overflow: hidden;
   background:
     linear-gradient(to bottom, rgba(5, 5, 15, 0.7), var(--clr-bg)),
-    url("https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=1600&q=80")
-      center/cover no-repeat;
+    url("../images/feature-banner-image.webp") center/cover no-repeat;
 }
 .page-banner .hero-grid-bg {
   opacity: 0.4;
