@@ -200,21 +200,28 @@ function initFooterForm() {
   const form = document.getElementById("footer-form");
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
-    const btn = form.querySelector("button");
-    const input = form.querySelector("input");
-    btn.textContent = "✓ Subscribed!";
-    btn.style.background = "linear-gradient(135deg, #00ffa3, #00d4ff)";
-    input.value = "";
-    setTimeout(() => {
-      btn.textContent = "Subscribe";
-      btn.style.background = "";
-    }, 3000);
+    window.location.href = "404.html";
   });
 }
 
 /* --- Contact Form --- */
 function initContactForm() {
   const form = document.getElementById("contactForm");
+  const nameInput = document.getElementById("contactName");
+
+  nameInput?.addEventListener("input", () => {
+    nameInput.value = nameInput.value.replace(/[^a-zA-Z\s]/g, "");
+  });
+
+  nameInput?.addEventListener("keydown", (e) => {
+    if (/[0-9]/.test(e.key) && e.key.length === 1) {
+      e.preventDefault();
+    }
+    if (/[^a-zA-Z\s]/.test(e.key) && e.key.length === 1) {
+      e.preventDefault();
+    }
+  });
+
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
     window.location.href = "404.html";
