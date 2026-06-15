@@ -212,6 +212,15 @@ function initFooterForm() {
   });
 }
 
+/* --- Contact Form --- */
+function initContactForm() {
+  const form = document.getElementById("contactForm");
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    window.location.href = "404.html";
+  });
+}
+
 /* --- Typed Hero Text Effect --- */
 function initTyped() {
   const el = document.getElementById("typed-text");
@@ -321,5 +330,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initScrollTop();
     initTyped();
     initFooterForm();
+    initContactForm();
   });
 });
