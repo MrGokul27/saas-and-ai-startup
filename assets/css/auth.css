@@ -30,6 +30,25 @@
   z-index: 0;
 }
 
+.auth-back-link {
+  margin-bottom: 24px;
+}
+
+.auth-back-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--clr-muted);
+  transition: var(--transition);
+}
+
+.auth-back-link a:hover {
+  color: var(--clr-white);
+  transform: translateX(-4px);
+}
+
 /* Wrapper — two-column split */
 .auth-wrapper {
   display: grid;
