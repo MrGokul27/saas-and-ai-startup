@@ -328,6 +328,18 @@ function initLogout() {
     });
 }
 
+/* ---- Back to Home Button ---- */
+function initHomeButton() {
+  const container = document.querySelector(".db-sidebar-bottom");
+  if (!container) return;
+
+  const homeBtn = document.createElement("a");
+  homeBtn.href = "../index.html";
+  homeBtn.className = "db-home-btn";
+  homeBtn.innerHTML = `<span style="font-size: 16px">🏠</span> Back to Home`;
+  container.prepend(homeBtn);
+}
+
 /* ---- Welcome banner ---- */
 function setWelcome(sub) {
   const titleEl = document.getElementById("welcomeTitle");
@@ -345,5 +357,6 @@ function bootShell(activeHref, welcomeSub) {
   initMobileToggle();
   initLogout();
   setWelcome(welcomeSub);
+  initHomeButton();
   _initPlaceholderRedirects();
 }

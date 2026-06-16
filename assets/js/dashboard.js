@@ -1528,6 +1528,19 @@ overlay.addEventListener("click", () => {
 });
 
 /* =============================================
+   HOME BUTTON
+   ============================================ */
+(function initHomeButton() {
+  const container = document.querySelector(".db-sidebar-bottom");
+  if (!container) return;
+  const homeBtn = document.createElement("a");
+  homeBtn.href = "../index.html";
+  homeBtn.className = "db-home-btn";
+  homeBtn.innerHTML = `<span style="font-size: 16px">🏠</span> Back to Home`;
+  container.prepend(homeBtn);
+})();
+
+/* =============================================
    LOGOUT
    ============================================= */
 document.getElementById("logoutBtn").addEventListener("click", () => {

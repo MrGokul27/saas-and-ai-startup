@@ -187,6 +187,24 @@
   color: #ff6b6b;
   background: rgba(255, 107, 107, 0.08);
 }
+.db-home-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.87rem;
+  font-weight: 500;
+  color: var(--clr-muted);
+  transition: var(--transition);
+  width: 100%;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+.db-home-btn:hover {
+  color: var(--clr-white);
+  background: rgba(255, 255, 255, 0.05);
+}
 
 /* ---- Main Content ---- */
 .db-main {
