@@ -118,6 +118,30 @@
           display: none;
         }
       }
+
+      /* Revenue chart header */
+      @media (max-width: 480px) {
+        .an-chart-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .an-year-tabs {
+          width: 100%;
+          overflow-x: auto;
+        }
+      }
+
+      /* Donut legend */
+      @media (max-width: 480px) {
+        .db-donut-legend {
+          width: 100%;
+        }
+
+        .db-legend-item {
+          flex-wrap: wrap;
+        }
+      }
     </style>
   </head>
   <body class="dash-page">

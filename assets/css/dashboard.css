@@ -2064,3 +2064,21 @@
     padding-left: 26px;
   }
 }
+
+/* MOBILE OVERFLOW FIXES */
+/* All layout containers */
+.db-main,
+.db-content,
+.pg-grid-4,
+.pg-grid-2,
+.pg-grid-main-side,
+.db-widget,
+.db-widget-body {
+  min-width: 0;
+}
+
+.api-key {
+  font-family: monospace;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
